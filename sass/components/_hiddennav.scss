@@ -1,0 +1,66 @@
+header {
+    display: flex; 
+    justify-content: space-between;
+    width: 98%;
+    padding: 5px 16px;
+    background: rgba(270,270,270,0.0009);
+    font-family: 'Arial';
+    font-size: 13px;
+    font-weight: bold;
+    align-items: center;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    position: fixed;
+    transition: all 300ms ease-in-out;
+    margin: 0px;
+        a {
+            text-decoration: none;
+            color: white;
+            &:hover {
+                color: $pinksite;
+            }
+        }
+        img {
+            width: 20px;
+            height: 20px;
+        }
+        .logoreseau {
+            padding: 10px;
+        }
+}
+
+#hiddenright {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+        .likes {
+            display: flex; 
+            align-items: center;
+            gap: 5px;
+        }
+        .espaceperso {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+}
+
+.scroll-down header {
+    transform: translate(0, -100%);
+}
+
+// .scroll-up header {
+
+// }
+
+.scroll-down nav {
+    transform: translate(0, -55px);
+}
+// .scrollup nav {
+//     transform:translateY(100%, 110%);
+// }
+
+// .scrolldown nav {
+//     top:0;
+// }
