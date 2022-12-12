@@ -1,0 +1,11 @@
+#map { 
+    height: 600px; 
+}
+.leaflet-interactive{
+    stroke-width: 7;
+    stroke: $orangesite;
+    &:hover{
+        stroke: $pinksite;
+    }
+    
+}
