@@ -1,5 +1,7 @@
 #map { 
-    height: 600px; 
+    float: right;
+    height: 800px; 
+    width: 60%;
 }
 .leaflet-interactive{
     stroke-width: 7;
@@ -7,5 +9,4 @@
     &:hover{
         stroke: $pinksite;
     }
-    
 }

@@ -1,10 +1,11 @@
-var map = L.map('map').setView([50.9652183, 1.8630816], 10);
+var map = L.map('map').setView([50.9652183, 1.8630816], 1);
 
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; CTRLS all right reserved'
+    attribution: '&copy; <a href="https://github.com/Cindoushka/EuroVelo5" target="_blank">CTRLS</a> all right reserved'
 }).addTo(map);
 
-var gpx = './maps.gpx'; // URL to your GPX file or the GPX itself
+var gpx = './maps.gpx';
+
 new L.GPX(gpx, {
     async: true,
     gpx_options: {
