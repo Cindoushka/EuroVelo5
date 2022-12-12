@@ -21,12 +21,3 @@ window.addEventListener('scroll', () => {
 
   lastScroll = currentScroll
 })
-
-
-
-
-// let myHiddenFunc = function() {
-//   if window.pageYOffset = 0 {
-
-//   }
-// }
