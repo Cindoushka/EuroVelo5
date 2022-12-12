@@ -3,6 +3,18 @@
     flex-direction: row;
     background-color: black;
     padding: 200px;
+        input {
+            height: 20px;
+            border-radius: 0px 5px 5px 0px;
+            margin-left: -10px;
+            margin-right: 200px;
+                &:focus {
+                    outline-width: 0;
+                }
+        }
+        input[type='submit'] {
+            width: 284px;
+        } 
 }
 
 
@@ -20,22 +32,65 @@
     transform: translate(0,-50%);
 }
 
-.boutonleft {
+.bullerouge {
+    position: absolute;
+    content: "";
+    display: block;
+    background-color: white;
+    width: 10px;
+    height: 10px;
+    border: 2px solid #f2675e;
+    left: 10px;
+    top: 50%;
+    border-radius: 100%;
+    transform: translate(0,-50%);
+}
+
+.boutonleft, .boutonmiddle {
     background-color: white;
     border-radius: 5px;
     padding-left: 50px;
     position: relative;
-    // align-items: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 280px;
 }
 
-#starting {
+#starting, #arrival {
     transition: all .2s ease-out;
-    background: 0 0;
-    width: 200px;
+    // background: 0 0;
+    width: 230px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-    padding: 10px 40px 10px 0;
+    // padding: 10px 40px 10px 0;
     font-family: 'Arial';
     font-weight: 600;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     border: 0;
+    left: 45px;
+    top: 0;
+    // position: absolute;
 }
+
+.test {
+    background-color: white;
+    padding: 20px 0px;
+}
+
+#containerform {
+    display: flex;
+    gap: 30px;
+    z-index: 111;
+    margin-left: 10%;
+}
+
+.boutonright {
+    background-color: $pinksite;
+    border: 0;
+    border-radius: 5px;
+    color: white;
+    font-size:0.8rem;
+    font-family: 'Arial';
+    padding: 0px 53px;
+}
+
