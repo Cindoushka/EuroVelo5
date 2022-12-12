@@ -1,0 +1,41 @@
+#boutonitineraire {
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+    padding: 200px;
+}
+
+
+.bulleverte {
+    position: absolute;
+    content: "";
+    display: block;
+    background-color: white;
+    width: 10px;
+    height: 10px;
+    border: 2px solid #87ba61;
+    left: 10px;
+    top: 50%;
+    border-radius: 100%;
+    transform: translate(0,-50%);
+}
+
+.boutonleft {
+    background-color: white;
+    border-radius: 5px;
+    padding-left: 50px;
+    position: relative;
+    // align-items: center;
+}
+
+#starting {
+    transition: all .2s ease-out;
+    background: 0 0;
+    width: 200px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 10px 40px 10px 0;
+    font-family: 'Arial';
+    font-weight: 600;
+    font-size: 0.9rem;
+    border: 0;
+}
