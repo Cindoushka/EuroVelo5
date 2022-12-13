@@ -1,8 +1,9 @@
 #siwprepere {
-    margin: auto;
+    // margin-left: 37%;
     z-index: 9;
-    width: 90%;
+    width: 20%;
     display: flex;
+    margin: auto;
     .swipebullet {
         background: white;
         border-radius: 2px;
@@ -21,21 +22,53 @@
     text-align: center;
     color: white;
     font-family: 'Poppins';
-    font-weight: 600;
-    font-size: 3rem;
+    font-weight: 700;
+    font-size: 2.625rem;
+    margin-bottom: -10px;
 }
 
 .homesubtitle {
     text-align: center;
-    width: 70%;
+    // width: 70%;
     color: white;
-    font-family: 'Arial';
-    font-weight: 200;
-    margin: auto;
-    font-size: 3rem;
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 2.625rem;
+    margin: 0px auto 50px auto;
 }
 
 
-// main {
-//     background-color: black;
-// }
+main {
+    width: 100%;
+}
+.elements {
+    display: flex;
+    // transform: translateX(-100%);
+    .element {
+        flex: 1 0 100%;
+        position: relative;
+        img {
+            width:100%;
+            height: 90vh;
+            object-fit: cover;
+        }
+    }
+    .caption {
+        position: absolute;
+        width: 100%;
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .caption1 {
+        position: absolute;
+        width: 100%;
+        top: 10%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.diapo {
+    overflow: hidden;
+}
