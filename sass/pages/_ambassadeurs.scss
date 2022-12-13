@@ -12,13 +12,6 @@
     z-index: 1;
 }
 
-p{
-    font-family: 'Mukta Mahee', sans-serif;
-    padding-top: 2%;
-    font-size: 1.125rem;
-    text-align: justify;  
-    color: #585858
-}
 .titre{
     font-family: 'Mukta Mahee', sans-serif;
     padding-top: 20px;
@@ -41,6 +34,13 @@ p{
     display: flex;
     flex-wrap: wrap;
      
+    p{
+        font-family: 'Mukta Mahee', sans-serif;
+        padding-top: 2%;
+        font-size: 1.125rem;
+        text-align: justify;  
+        color: #585858
+    }
  
     .row{
         flex-direction:  row;
