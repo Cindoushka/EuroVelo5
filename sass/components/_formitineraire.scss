@@ -8,15 +8,12 @@
             border-radius: 0px 5px 5px 0px;
             margin-left: -10px;
             margin-right: 200px;
-                &:focus {
-                    outline-width: 0;
-                }
         }
-        input[type='submit'] {
-            width: 284px;
-        } 
-}
 
+}
+        input:focus {
+            outline: none;
+        }
 
 .bulleverte {
     position: absolute;

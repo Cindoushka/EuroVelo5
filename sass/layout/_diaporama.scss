@@ -1,0 +1,41 @@
+#siwprepere {
+    margin: auto;
+    z-index: 9;
+    width: 90%;
+    display: flex;
+    .swipebullet {
+        background: white;
+        border-radius: 2px;
+        opacity: 1;
+        width: 30px;
+        height: 3px;
+        margin: 0px 5px;
+        content: "";
+    }
+    .swipebullet-active {
+        background: $pinksite;
+    }
+}
+
+.hometitle {
+    text-align: center;
+    color: white;
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 3rem;
+}
+
+.homesubtitle {
+    text-align: center;
+    width: 70%;
+    color: white;
+    font-family: 'Arial';
+    font-weight: 200;
+    margin: auto;
+    font-size: 3rem;
+}
+
+
+main {
+    background-color: black;
+}
