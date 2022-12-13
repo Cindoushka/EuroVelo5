@@ -1,7 +1,8 @@
 #map { 
     float: right;
-    height: 800px; 
+    height: 834px; 
     width: 60%;
+    margin-top: 135px;
 }
 .leaflet-interactive{
     stroke-width: 7;
@@ -10,3 +11,12 @@
         stroke: $pinksite;
     }
 }
+.pointmarker{
+    color:red
+}
+.nav-itineraire{
+    background-color: white;
+    div a{
+        color: black
+    }
+} 
