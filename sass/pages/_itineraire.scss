@@ -6,9 +6,11 @@
 }
 .leaflet-interactive{
     stroke-width: 7;
-    stroke: $orangesite;
     &:hover{
         stroke: $pinksite;
+    }
+    &:focus{
+        stroke: red
     }
 }
 .pointmarker{
@@ -20,3 +22,7 @@
         color: black
     }
 } 
+
+.test{
+    stroke: black;
+}
