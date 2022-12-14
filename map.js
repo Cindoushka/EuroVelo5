@@ -8,14 +8,12 @@ L.tileLayer('https://{s}.tile.thunderforest.com/spinal-map/{z}/{x}/{y}.png?apike
     maxZoom: 22
   }).addTo(map);
 
-
 fetch(allURL)
   .then(response => response.json())
   .then(data => {
       gpx = mapURL + data.data[0].attributes.coordinate.data.attributes.url
-      console.log(gpx)
       new L.GPX(gpx, {
-        async: true,
+        async: true, 
         gpx_options: {
             joinTrackSegments: false
           },
@@ -25,11 +23,12 @@ fetch(allURL)
             shadowUrl: null,
             iconSize: [20,30]
           }
-        }).on('loaded', function(e) {
+        })
+        .on('loaded', function(e) {
         map.fitBounds(e.target.getBounds());
-      }).addTo(map);
+      })
+      .on('click', function(e) {
+        
+      })
+        .addTo(map);
   })
-
-
-
-  
