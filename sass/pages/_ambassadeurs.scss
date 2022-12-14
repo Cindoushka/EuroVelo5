@@ -115,3 +115,38 @@
      }
   
  }
+
+ .itin{
+    padding-top: 8%;
+    display: flex;
+    // flex-wrap: wrap;
+    flex-direction: row;
+    margin-left: 10%;
+    margin-right: 10%;
+    
+        gap: 20px;
+            .left{
+            order: 2;
+            height: 50%;
+        }
+        .right{
+            order: 1;
+            height: 50%;
+        }
+           .details{
+            font-family: "Mukta Mahee", sans-serif;
+            padding-top: 2%;
+            font-size: 1.125rem;
+            text-align: justify;
+            color: #585858;
+        }
+        h1{
+            margin-top: 0px;
+            font-family: Poppins,sans-serif;
+            font-weight: 600;
+            font-size: 1.5rem;
+            font-size: 1.875rem;
+            color: #231f20;
+        }
+    
+ }
