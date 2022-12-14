@@ -1,0 +1,75 @@
+.findaccueil {
+    width: 860px;
+    margin: auto;
+    padding: 50px 0px;
+}
+    .texteaccueilvelo {
+        .imgav {
+            width: 30px;
+            padding-right: 60px;
+            float: left;
+        }
+        .petittitre {
+            font-family: 'Poppins';
+            font-size: 2.25rem;
+            font-weight: 300;
+            text-align: left;
+        }
+        .descriptionAV {
+            font-family: 'Mukta Mahee';
+            font-size: 1rem;
+            text-align: left;
+        }
+    }
+
+#contenairemenuaccueil {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: auto;
+    overflow: hidden;
+        .menuflex, .menuflexex {
+            width: 170px;
+            height: 230px;
+            border-radius: 5px;
+        }
+}
+
+
+.liendelaflexalacon {
+    display: flex;
+    .imgtest {
+        width: 151px;
+        height: 205px;
+        border-radius: 5px;
+        position: relative;
+        filter: brightness(-0.2);
+    }
+    .textimage, .textimage2, .textimage3 {
+        background-color: rgba(0, 0, 0, 0.3);
+        border-radius: 5px;
+        z-index: 4;
+        position: absolute;
+        color: white;
+        font-family: 'Mukta Mahee';
+        width: 151px;
+        text-align: center;
+    }
+    .textimage {
+        padding: 94px 0px 93px 0px;
+    }
+    .textimage2 {
+        padding: 84px 0px;
+    }
+    .textimage3 {
+        padding: 75px 0px;
+    }
+    &:hover {
+        .imgtest {
+            filter: blur(4px);
+            filter:brightness(-0.5);
+            border-radius: 5px;
+        }
+    }
+}
+
