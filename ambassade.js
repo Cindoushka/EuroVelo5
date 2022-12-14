@@ -8,9 +8,7 @@ let url="http://62.4.21.200:1337/api/temoignage-detail2s?populate=*"
     let title=document.querySelector('.title')
     let details=document.querySelector('.details')
     let photo=document.querySelector('.photo')
-    let list1=document.querySelector('.list1')
-    let list2=document.querySelector('.list2')
-   
+  
    
 
     let GenerateTitle=`
@@ -18,21 +16,16 @@ let url="http://62.4.21.200:1337/api/temoignage-detail2s?populate=*"
     `
     title.innerHTML=GenerateTitle
 
-
+    var converter = new showdown.Converter();
+    var text = data.data[0].attributes.details;
+    var html = converter.makeHtml(text);
+    
+    
     let GenerateDetails=`
-    <p> ${data.data[0].attributes.details}</p>
+    <p> ${html}</p>
     `
     details.innerHTML=GenerateDetails
 
-    let GenerateList1=`
-    <ul><li> ${data.data[0].attributes.list1}</ul></li>
-    `
-    list1.innerHTML=GenerateList1
-
-    let GenerateList2=`
-    <ul><li> ${data.data[0].attributes.list2}</ul></li>
-    `
-    list2.innerHTML=GenerateList2
 
     let GeneratePhoto=`
     <img src="`+ urlImage + data.data[0].attributes.photo.data[0].attributes.formats.small.url +`">`
