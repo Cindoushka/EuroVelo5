@@ -1,6 +1,7 @@
 var map = L.map('map').setView([50.9652183, 1.8630816], 1);
 const mapURL= "http://62.4.21.200:1337";
 const allURL= "http://62.4.21.200:1337/api/infos-maps?populate=*"
+const url = "http://62.4.21.200:1337/uploads/map_b35ed6785e.xml"
 
 L.tileLayer('https://{s}.tile.thunderforest.com/spinal-map/{z}/{x}/{y}.png?apikey={apikey}', {
     attribution: '&copy; CTRLS all right reserved',
@@ -22,13 +23,18 @@ fetch(allURL)
             endIconUrl: null,
             shadowUrl: null,
             iconSize: [20,30]
+          },
+          polyline_options: {
+            color: 'orange'
           }
         })
         .on('loaded', function(e) {
         map.fitBounds(e.target.getBounds());
       })
       .on('click', function(e) {
-        
+        //e.setStyle(style); //resets layer colors
+        // e.target.setStyle(highlight);  //highlights selected.
       })
-        .addTo(map);
-  })
+  .addTo(map);
+})
+
