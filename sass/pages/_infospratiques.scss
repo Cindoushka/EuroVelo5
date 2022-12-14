@@ -1,5 +1,5 @@
 
-main{
+.corps{
     padding-top: 80px;
     margin-left: 25%;
     margin-right: 25%;
@@ -28,15 +28,24 @@ main{
     grid-template-columns: 1fr 1fr 1fr ;
     grid-gap: 15px;
     margin-top: 50px;
+
+    
     
     
 
    .bloc {
         width: 100%;
-        position: relative;
-        
-           
+        position: relative;       
     }
+
+    .fusion {
+        width: 100%;
+        position: relative;
+        text-align: center;
+        grid-column-start: 2; 
+        grid-column-end: 4; 
+    }
+
 
     img{
         display: block;
@@ -44,7 +53,6 @@ main{
         height: 100%;
         width: 100%;
         object-fit: cover;
-        
         }
 
     .text{
@@ -53,7 +61,6 @@ main{
         text-align: center;
         left: 0;
         bottom: 15px;
-        
         }
 
         a {
@@ -61,7 +68,6 @@ main{
             cursor: pointer;
             text-decoration: none;
             width: auto;
-            
         }
 
 
@@ -70,33 +76,8 @@ main{
         height: 100%;
         width: 100%;
         object-fit: cover;
-        
-
-        
-
     }
 
-
-
-    text-align: center;
-
-    .bloc5 {
-        background: blue;
-        text-align: center;
-        border: black 5px solid;
-        grid-column-start: 2; 
-        grid-column-end: 4; 
-
-      }
-
-    .bloc10 {
-        background: blue;
-        text-align: center;
-        border: black 5px solid;
-        grid-column-start: 2; 
-        grid-column-end: 4; 
-
-      }
 
 
   }
