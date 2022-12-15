@@ -1,0 +1,54 @@
+#blocdelagrid {
+    width: 30%;
+    display: flex;
+    padding: 10px;
+        img {
+            width: 370px;
+            height: 370px;
+            object-fit: cover;
+            position: relative;
+            z-index: 2;
+            opacity: 0.9;
+            border-radius: 5px;
+        }
+        #textepourlagridaccueil {
+            position: absolute;
+            width: 370px;
+            height: 370px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            text-align: center;
+            z-index: 4;
+            font-family: 'Mukta Mahee';
+            color: white;
+                .boutonpourlagrid {
+                    font-size: 14px;
+                    background-color: $orangesite;
+                    max-width: 100px;
+                    margin: 10px auto;
+                    padding: 7px;
+                }
+                .titreimagegrid {
+                    font-size: 24px;
+                    padding: 20px;
+                    transition: all 100ms ease-in-out;
+                }
+        }
+        .liendelagridaccueil {
+            text-decoration: none;
+            display: flex;
+                &:hover {
+                    img {
+                    filter: blur(2px);
+                    transform: scale(1.2);
+                    width: 370px;
+                    height: 370px;
+                }
+                    .titreimagegrid {
+                        margin-bottom: 80px;
+                    }
+                }
+        }
+        
+}
