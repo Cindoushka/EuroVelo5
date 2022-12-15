@@ -122,46 +122,52 @@
   
  }
 
- .itin{
+ article.itin{
     padding-top: 80px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    margin-left: 12%;
-    margin-right: 12%; 
-    width: 70%;
+    margin:0;
+    width: 100%;
  }
+ div.photo img{
     
-        div.left{
+    display: block;
+    height: 537px;
+    box-shadow: 0 40px 60px 0 rgb(0 0 0 / 18%);
+    width: 100%;
+    background-color: #fff;
+   
+}
+
+        article div.left{
          
            box-shadow: 0 40px 60px 0 rgb(0 0 0 / 18%);
-           display: block;
-           width: 38%;
-           margin: auto;
-           height: 537px;
-            img{
-                height: 536px;
-                box-shadow: 0 40px 60px 0 rgb(0 0 0 / 18%);
-            }
-        }
-        div.right{ 
+           margin-top: 30px;
+           width: 43%;
+           margin-left: 0px;
+           height: 540px;
+           border-radius: 10px;
+           background-color: #fff;
+       }
+       article div.right{ 
             
             width: 50%;
-            margin: auto;
+            margin: auto 0px auto -40px;
             padding: 70px 50px;
-            border-radius: 4px;
+            border-radius: 8px;
             background-color: #fff;
-            position: relative;
             box-shadow: 0 40px 60px 0 rgb(0 0 0 / 18%);
-            
-            h1{  
-                margin: 0;
-                font-family: Poppins,sans-serif;
-                font-weight: 600;
-                font-size: 1.5rem;
+            position: relative;
+      }
+      h1{  
+        margin: 0;
+        font-family: Poppins,sans-serif;
+        font-weight: 600;
+        font-size: 1.5rem;
 
-            }
-        }
+    }
+
         .details{
             width: 100%;
             margin: auto;
@@ -173,13 +179,12 @@
             margin-bottom: 15px;
             font-family: "Mukta Mahee",sans-serif;
             font-weight: 500;
-            
         }
        
         
-     
- 
-
+.discover{
+    margin-left: 40px;
+}
  .discover a{
         display: inline-block;
         padding: 15px 15px;
@@ -200,4 +205,8 @@
 }
 span{
     color: black;
+}
+.format{
+    margin-left: 12%;
+    margin-right: 12%;
 }
