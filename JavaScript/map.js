@@ -44,18 +44,14 @@ fetch(allURL)
         .on('loaded', function(e) {
         map.fitBounds(e.target.getBounds());
       })
-      .on('click', function(e) {
-        //e.setStyle(style); //resets layer colors
-        // e.target.setStyle(highlight);  //highlights selected.
-      })
       .on('mouseover', function() {
         this.setStyle({
-            color: '#e5b9d5'   //or whatever style you wish to use;
+            color: '#e5b9d5' 
         });
       })
       .on('mouseout', function() {
         this.setStyle({
-            color: 'orange'   //or whatever style you wish to use;
+            color: 'orange'
         });
       })
       .on('click', function(){
