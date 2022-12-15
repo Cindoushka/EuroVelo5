@@ -1,10 +1,3 @@
-.leaflet-interactive{
-    stroke-width: 7;
-    &:hover{
-        stroke: $pinksite;
-    }
-}
-
 .nav-itineraire{
     background-color: white;
     div a{
@@ -12,6 +5,14 @@
     }
 } 
 
+.itineraire-body{
+    overflow-y: hidden;
+}
+
+.scroll{
+    overflow-y: scroll;
+    scrollbar-width: auto;
+}
 
 .itineraire-main{
     display: flex;
@@ -23,6 +24,7 @@
     }
     .itineraire-map-left{
         width: 33%;
+        height: 87vh;
         justify-content: left;
         .itineraire-map-options{
             display: flex;
@@ -59,6 +61,119 @@
                 color: $pinksite;
                 text-decoration: none;
                 text-transform: uppercase;
+            }
+        }
+        .itineraire-map-informations{
+            div{
+
+            .itineraire-map-informations-section{
+                margin-bottom: 5px;
+                margin-top: 5px;
+                font-family: "Mukta Mahee", sans-serif;
+                cursor: pointer;
+                .itineraire-map-informations-habitude{
+                    width: 100%;
+                    margin-left: -15px;
+
+                    span{
+                        width: 100%;
+                        display: inline-block;
+                        background-color: orange;
+                        padding: 5px 10px;
+                        font-weight: 600;
+                        font-size: .875rem;
+                        text-decoration: none;
+                        color: white;
+                        padding: 5px 10px;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                        white-space: nowrap;
+                    }
+                }
+                    .itineraire-map-informations-global-div{
+                        display: flex;
+                        border-radius: 5px;
+                        overflow: hidden;
+                        .itineraire-map-informations-image-div{
+                            height: 190px;
+                            width: 190px;
+                            img{
+                                height: 190px;
+                                width: 190px;
+                                overflow: hidden;
+                                object-fit: cover;
+                            }
+                        }
+                        .itineraire-map-informations-text-global{
+                            padding: 10px 30px 10px 15px;
+                            h2{
+                                margin: 0;
+                                font-size: 1.25rem;
+                                font-weight: 600;
+                                font-family: Poppins,sans-serif;
+                                margin: 0;
+                                text-overflow: ellipsis;
+                                overflow: hidden;
+                                white-space: nowrap;
+                                a{
+                                    text-decoration: none;
+                                    color: inherit;
+                                }
+                            
+                            }
+                            .itineraire-map-informations-description{
+                                margin: 10px 0 0 0;
+                                font-size: 1.125rem;
+                                color: #585858;
+                                line-height: 1.5em;
+                                text-align: justify;
+                                font-family: "Mukta Mahee",sans-serif;
+                                font-weight: 500;
+                            }
+                        
+                        }
+                        .itineraire-map-informations-difficulte{
+                            font-family: "Mukta Mahee",sans-serif;
+                            font-weight: 400;
+                            .itineraire-map-informations-difficulte-habitude{
+                                display: inline-block;
+                                padding: 5px 35px 5px 10px;
+                                font-weight: 600;
+                                font-size: .875rem;
+                                
+                            }
+                            .itineraire-map-informations-difficulte-habitude-blue{
+                                color: #3498DB;
+                            }
+                            .itineraire-map-informations-difficulte-habitude-red{
+                                color: #e6473e;
+                            }
+                            .itineraire-map-informations-difficulte-habitude-green{
+                                color: #56be81;
+                            }
+                        }
+                    }
+                    &:hover .itineraire-map-informations-section{
+                        border-radius: 5px;
+                    }
+                    &:hover .itineraire-map-informations-global-div{
+                        box-shadow: 2px 2px 2px 2px lightgray;
+                    }
+                    &:hover .itineraire-map-informations-text-global{
+                        background-color: black;
+                    }
+                    &:hover .itineraire-map-informations-text-global .itineraire-map-informations-description, &:hover h2{
+                        color: white;
+                    }
+                    &:hover .itineraire-map-informations-image{
+                        transition: all .2s ease-out;
+                        filter: blur(4px);
+                    }
+                    .itineraire-map-informations-image{
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
             }
         }
     }
