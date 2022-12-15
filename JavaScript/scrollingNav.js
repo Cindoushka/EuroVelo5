@@ -18,6 +18,22 @@ window.addEventListener('scroll', () => {
     body.classList.remove("scroll-down")
     body.classList.add("scroll-up")
   }
+  if (currentScroll > 1200 && !body.classList.contains("scrolldown")) {
+      body.classList.add("scrolldown")
+  }
 
+  if (currentScroll < lastScroll && body.classList.contains("scrollup")) {
+      body.classList.remove("scrollup")
+      body.classList.add("scrolldown")
+  }
+
+  if (currentScroll > lastScroll && body.classList.contains("scrolldown")) {
+    body.classList.remove("scrolldown")
+    body.classList.add("scrollup")
+  }
   lastScroll = currentScroll
+
+  console.log(lastScroll)
 })
+
+

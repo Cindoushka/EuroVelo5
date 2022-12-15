@@ -1,19 +1,19 @@
-.boutonrose {
-    background-color: $pinksite;
-    padding: 10px 25px;
-    border-radius: 5px;
-    text-decoration: none;
-    color: white;
-    text-align: center;
-    margin: 10px;
-    font-family: 'Arial';
-    font-size: 0.8em ;
-    box-shadow: 1px 1px 2px gray;
-        &:hover {
-            color: $pinksite;
-            background-color: white;
-        }
-}
+// .boutonrose {
+//     background-color: $pinksite;
+//     padding: 10px 25px;
+//     border-radius: 5px;
+//     text-decoration: none;
+//     color: white;
+//     text-align: center;
+//     margin: 10px;
+//     font-family: 'Arial';
+//     font-size: 0.8em ;
+//     box-shadow: 1px 1px 2px gray;
+//         &:hover {
+//             color: $pinksite;
+//             background-color: white;
+//         }
+// }
 
 .boutontransparent {
     background-color: rgba(255, 255, 255, 0.1);

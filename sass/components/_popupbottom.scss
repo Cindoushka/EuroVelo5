@@ -1,0 +1,40 @@
+#popupbas {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: $pinksite;
+    color: white;
+    position: absolute;
+    font-family: 'Mukta Mahee';
+    font-size: 19px;
+    font-weight: 700;
+    gap: 20px;
+    align-items: center;
+    z-index: 999;
+    bottom: -100%;
+    left: 0;
+    position: fixed;
+    transition: all 300ms ease-in-out;
+    box-shadow: rgb(0 0 0 / 25%) 1px 3px 5px;
+        a {
+            background: white;
+            padding: 6px 20px;
+            color: $pinksite;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+}
+
+.scrolldown #popupbas {
+    bottom: 0;
+}
+
+.scrollup #popupbas {
+    bottom: -100%;
+}
+
+
+
+
+
+
