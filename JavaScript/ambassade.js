@@ -53,7 +53,7 @@ fetch(url)
             let generateHtml=`
             <article class="itin">
             <div class="left">
-                 <div class="photo"><img src="`+ urlImage + data.data[i].attributes.photo.data[0].attributes.formats.large.url +`"></div>
+                 <div class="photo"><img src="`+ urlImage + data.data[i].attributes.photo.data[0].attributes.formats.medium.url +`"></div>
             </div> 
             <div class="right">                
                 <div class="title"> <h1> ${data.data[i].attributes.titre}</h1></div>
