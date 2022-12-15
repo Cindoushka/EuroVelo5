@@ -1,7 +1,7 @@
 #siwprepere {
     // margin-left: 37%;
     z-index: 9;
-    width: 20%;
+    width: 320px;
     display: flex;
     margin: auto;
     .swipebullet {
@@ -38,7 +38,7 @@
 }
 
 
-main {
+.maindiapo {
     width: 100%;
 }
 .elements {
@@ -49,24 +49,25 @@ main {
         position: relative;
         img {
             width:100%;
-            height: 90vh;
+            height: 95vh;
             object-fit: cover;
         }
     }
-    .caption {
-        position: absolute;
-        width: 100%;
-        top: 70%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-    .caption1 {
-        position: absolute;
-        width: 100%;
-        top: 10%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
+}
+
+.caption {
+    position: absolute;
+    width: 100%;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.caption1 {
+    position: absolute;
+    width: 100%;
+    top: 21%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .diapo {

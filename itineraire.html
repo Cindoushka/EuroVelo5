@@ -8,9 +8,16 @@
     <link rel="stylesheet" href="sass/main.css">
     <script src='https://api.mapbox.com/mapbox.js/v3.3.1/mapbox.js'></script>
     <link href='https://api.mapbox.com/mapbox.js/v3.3.1/mapbox.css' rel='stylesheet' />
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"/>
-    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
 
+
+    <!-- Pour la map -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+    integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+    crossorigin=""/>
+
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+    integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+    crossorigin=""></script>
 
     
     <title>Via Romea Francigena - Plus de 1000kms de la Belgique au Nord de la France</title>
@@ -60,7 +67,35 @@
    </nav>
 
 
-   <main>
+   <main class="itineraire-main">
+
+    <div class="itineraire-map-left">
+
+        <div class="itineraire-map-options">
+            <a href="#" class="etapes actif">
+                <span>
+                    <p>Les étapes</p>
+                </span>
+            </a>
+            
+            <a href="#" class="gps inactif">
+                <span>
+                    <p>Mon GPS</p>
+                </span>
+            </a>
+        </div>
+        <div class="itineraire-map-download">
+            <a href="https://simplonline-v3-prod.s3.eu-west-3.amazonaws.com/media/file/xml/69e1794f-c950-4e82-bab1-15c511be92e0.xml">
+                <span>
+                    <p>
+                        Téléchargez le .GPX de l'eurovelo 5
+                    </p>
+                </span>
+            </a>
+        </div>
+
+    </div>
+
 
     <div id="map"></div>
 
@@ -70,8 +105,10 @@
     <script src="//code.jquery.com/jquery-3.6.0.min.js"></script>
 
    <script src='https://unpkg.com/leaflet.mapkitmutant@latest/Leaflet.MapkitMutant.js'></script>
-   <script src="scrollingNav.js"></script>
-   <script src="map.js"></script>
+   <script src="javascript/scrollingNav.js"></script>
+   <script src="javascript/map.js"></script>
+   <script src="javascript/itineraire.js"></script>
+
    
    
 

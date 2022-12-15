@@ -1,22 +1,65 @@
-#map { 
-    float: right;
-    height: 834px; 
-    width: 60%;
-    margin-top: 135px;
-}
 .leaflet-interactive{
     stroke-width: 7;
-    stroke: $orangesite;
     &:hover{
         stroke: $pinksite;
     }
 }
-.pointmarker{
-    color:red
-}
+
 .nav-itineraire{
     background-color: white;
     div a{
         color: black
     }
 } 
+
+
+.itineraire-main{
+    display: flex;
+    margin-top: 135px;
+    #map{
+        justify-content: right;
+        height: 834px; 
+        width: 67%;
+    }
+    .itineraire-map-left{
+        width: 33%;
+        justify-content: left;
+        .itineraire-map-options{
+            display: flex;
+            a{
+                color: gray;
+                width: 50%;
+                padding-top: 20px;
+                padding-bottom: 15px;
+                cursor: pointer;
+                text-decoration: none;
+                text-align: center;
+                font-size: 12px;
+                font-weight: 600;
+                span p{
+                    text-align: center;
+                    font-family: 'Poppins', Verdana, Geneva, Tahoma, sans-serif;
+                    font-weight: inherit;
+                    font-size: inherit;
+                    margin: 0;
+                    text-transform: uppercase;
+                }
+                &.actif{
+                    color: $pinksite;
+                    border-bottom: 3px solid $pinksite;
+                }
+            }
+        }
+        .itineraire-map-download{
+            text-align: center;
+            a{
+                font-weight: 600;
+                font-size: .875rem;
+                font-family: 'Poppins', Verdana, Geneva, Tahoma, sans-serif;
+                color: $pinksite;
+                text-decoration: none;
+                text-transform: uppercase;
+            }
+        }
+    }
+}

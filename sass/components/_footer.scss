@@ -1,0 +1,19 @@
+#footer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: $pinksite;
+    color: white;
+    position: absolute;
+    font-family: 'Mukta Mahee';
+    font-size: 18px;
+    font-weight: 700;
+    gap: 20px;
+    align-items: center;
+        a {
+            background: white;
+            // padding: 6px 20px;
+            color: $pinksite;
+            border-radius: 5px;
+        }
+}

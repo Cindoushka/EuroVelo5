@@ -40,7 +40,10 @@
 
    <nav id="navbar">
 
-    <a href="index.html"><img src="/Images/logoeurovelo5.png" alt="Logo Eurovelo5" title="logo de l'Eurovelo5" class="imgnav"></a>
+        <a href="index.html">
+            <img src="Images/EAVF_Logo_2021.png" alt="logo Via Romea Francigena" title="logo Via Romea Francigena" class="imgnav">
+            <img src="Images/logoeurovelo5.png" alt="Logo Eurovelo5" title="logo de l'Eurovelo5" class="imgnav">
+        </a>
         <a href="itineraire.html" class="nav">L'ITINÉRAIRE</a>
         <a href="infospratiques.html" class="nav">INFOS PRATIQUES</a>
         <a href="adecouvrir.html" class="nav">À DÉCOUVRIR</a>
@@ -53,8 +56,87 @@
 
 <div>
     
-    <img src="Images/beach.jpg" alt="photo de plage" title="photo de plage" class="photoplage">
-    
+    <main class="maindiapo">
+
+        <div class="diapo">
+            <div class="elements">
+                <div class="element">
+                    <img src="/Images/beach.jpg" alt="plage" title="photo de plage">
+                </div>
+
+                <div class="element">
+                    <img src="/Images/profiladeux.jpg" alt="velo a deux" title="velo a deux">                    
+                </div>
+
+                <div class="element">
+                    <img src="/Images/bruxelles.jpg" alt="vélo sur la grand place de Bruxelles" title="photo de velo grand place de bruxelles">
+                </div>
+
+                <div class="element">
+                    <img src="/Images/champsvelo.jpg" alt="velo autour du canal" title="velo autour du canal">
+                </div>
+
+                <div class="element">
+                    <img src="/Images/eglisepre.jpg" alt="velo face à une eglise" title="velo face a l'eglise">
+                </div>
+
+                <div class="element">
+                    <img src="/Images/coucherdesoleil.jpg" alt="velo coucher de soleil" title="velo coucher de soleil">
+                </div>
+
+                <div class="element">
+                    <img src="/Images/coupletemoignage.jpg" alt="famille pause velo" title="famille velo">
+                </div>
+
+                <div class="element">
+                    <img src="/Images/landscape.jpg" alt="velo face a une riviere" title="velo en bord de rivier">
+                </div>
+
+            </div>
+        </div>
+
+        <div class="caption1">
+            <div id="siwprepere">
+                <span class="swipebullet"></span>
+                <span class="swipebullet"></span>
+                <span class="swipebullet"></span>
+                <span class="swipebullet"></span>
+                <span class="swipebullet"></span>
+                <span class="swipebullet"></span>
+                <span class="swipebullet"></span>
+                <span class="swipebullet"></span>
+            </div>
+        </div>
+        
+        <div class="caption">
+            <h1 class="hometitle">La Via Romea Francigena</h1>
+            <h2 class="homesubtitle">Une expérience unique à la découverte de perles rares</h2>
+
+            <div class="divboutonsaccueil">
+                <form>
+                    <div id="containerform">
+                        <div  class="boutonleft">
+                            <div class="test">
+                                <div class="bulleverte"></div>
+                            </div>
+                                <input type="text" name="starting" id="starting" placeholder="Lieu de départ">
+                        </div>
+        
+                        <div class="boutonmiddle">
+                            <div class="test">
+                                <div class="bullerouge"></div>
+                            </div>
+                                <input type="text" name="arrival" id="arrival" placeholder="Lieu d'arrivée">
+                        </div>
+                    
+                        <input type="submit" value="CALCULER MON ITINÉRAIRE" class="boutonright">
+                    </div>
+                </form>
+            </div>
+
+        </div>
+
+    </main>    
 
 </div>
 
@@ -69,8 +151,8 @@
         Cet intinéraire à vélo traverse le Sud de l'Angleterre, le Nord de la France, la Belgique, le Luxembourg, l'Alsace, la Suisse et l'entièreté de l'Italie en passant par Rome.
         De nombreuses étapes vous réservent de belles surprise, en plus de traverser Lille, vous découvrirez la nature, notamment en passant par Dinant,
         cette ville où vous pourrez découvrir la descente de la Lesse. Découvrez le pays du Luxembourg, faites un break à Strasbourg et ses maisons typiques,
-        pédalez sur les rives du Lac Lucerne en Suisse, le long du Lac de Côme en arrivant en Italie. Faites un break au sein de la ville du shopping à Milan, avant de découvrir la mer
-        Ligurienne avant de rejoindre la Capitale Italienne avant de traverser les Pouilles et de rejoindre Brindisi, sur les bords de la Mer Adriatique.
+        pédalez sur les rives du Lac Lucerne en Suisse, le long du Lac de Côme en arrivant en Italie. Faites un break au sein de la capitale du shopping: Milan, avant de découvrir la mer
+        Ligurienne pour rejoindre la Capitale Italienne et de traverser les Pouilles jusque Brindisi, sur les bords de la Mer Adriatique.
     </p>
 
     <p class="descHome">Avec une part importante des voies partagées, c'est un itinéraire idéal pour les cyclistes en recherche d'évasion, de défi, de découverte culturelle et gastronomique. 
@@ -111,7 +193,62 @@
 
     </form>
 
-   <script src="scrollingNav.js"></script>
+    <section class="findaccueil">
+
+        <div class="texteaccueilvelo">
+            <img src="/Images/accueilvelo.png" alt="logo accueil velo" title="accueil velo" class="imgav">
+            <h2 class="petittitre">Trouver mon Accueil Vélo</h2>
+
+
+            <p class="descriptionAV">
+                Accueil Vélo est une marque qui garantit des services de qualité auprès des cyclistes le long de l'itinéraire
+            </p>
+        </div>
+
+            <div id="contenairemenuaccueil">
+
+                <div class="tesdutmenu">
+                    <a href="https://www.francevelotourisme.com/accueil-velo/hebergement" class="liendelaflexalacon">
+                    <img src="/Images/hotel.jpg" class="imgtest">
+                    <span class="textimage">HÉBERGEMENTS</span>
+                    </a>
+                </div>
+                <div class="tesdutmenu">
+                    <a href="https://www.francevelotourisme.com/restaurants-bars" class="liendelaflexalacon">
+                    <img src="/Images/restaurant.jpg" class="imgtest">
+                    <span class="textimage">RESTAURANTS</span>
+                    </a>
+                </div>
+                <div class="tesdutmenu">
+                    <a href="https://www.francevelotourisme.com/loisirs" class="liendelaflexalacon">
+                    <img src="/Images/palerme.jpeg" class="imgtest">
+                    <span class="textimage">LIEUX DE VISITE</span>
+                    </a>
+                </div>
+                <div class="tesdutmenu">
+                    <a href="https://www.francevelotourisme.com/pratique/offices-de-tourisme" class="liendelaflexalacon">
+                    <img src="/Images/office.jpeg" class="imgtest">
+                    <span class="textimage2">OFFICES DE TOURISME</span>
+                    </a>
+                </div>
+                <div class="tesdutmenu">
+                    <a href="https://www.francevelotourisme.com/pratique/loueurs-reparateurs-de-velo" class="liendelaflexalacon">
+                    <img src="/Images/reparation.jpg" class="imgtest">
+                    <span class="textimage3">LOUEURS & RÉPARATEURS DE VÉLO</span>
+                    </a>
+                </div>
+
+            </div>
+    </section>
+
+    <footer id="footer">
+        <p class="textefooter">Comment rejoindre la Via Romea Francigena par le  train 🚉</p>
+        <a href="velosettransports.html"> → En savoir plus </a>
+    </footer>
+
+   <script src="JavaScript/scrollingNav.js"></script>
+   <script src="JavaScript/diaporama.js"></script>
+
     
 </body>
 </html>
