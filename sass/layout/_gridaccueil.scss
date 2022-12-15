@@ -1,7 +1,10 @@
 #blocdelagrid {
-    width: 30%;
-    display: flex;
+    width: 100%;
+    display: grid;
+    grid-template-rows: repeat(3, 370px);
+    grid-template-columns: 1fr 1fr 1fr;
     padding: 10px;
+    grid-gap: 30px;
         img {
             width: 370px;
             height: 370px;
@@ -38,12 +41,15 @@
         .liendelagridaccueil {
             text-decoration: none;
             display: flex;
+            overflow: hidden;
+            width: 370px;
+            height: 370px;
+            border-radius: 5px;
                 &:hover {
                     img {
                     filter: blur(2px);
                     transform: scale(1.2);
-                    width: 370px;
-                    height: 370px;
+                    border-radius: 5px;
                 }
                     .titreimagegrid {
                         margin-bottom: 80px;

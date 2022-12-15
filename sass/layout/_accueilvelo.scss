@@ -38,6 +38,8 @@
 
 .liendelaflexalacon {
     display: flex;
+    overflow: hidden;
+    border-radius: 5px;
     .imgtest {
         width: 151px;
         height: 205px;
