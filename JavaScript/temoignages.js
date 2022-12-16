@@ -10,13 +10,13 @@ fetch(urlBdd)
     .then(response => response.json())
     .then(data =>{
 
-        for(let i=0; i< data.meta.pagination.total; i++) {
+        for(let i=0; i< 3; i++) {
             let article = document.createElement("div")
             let generateHtml=`
             <article class="billettemoignages">
                 <p class="publishdate"> ${data.data[i].attributes.DatePublish} </p>
                 <h2 class="namewitness"> ${data.data[i].attributes.NameWitness} </h2>
-                <p class="etiquettemap"> ${data.data[i].attributes.description_maps.data[0].attributes.depart} > ${data.data[i].attributes.description_maps.data[0].attributes.arrive} </p>
+                <span class="etiquettemap"> ${data.data[i].attributes.description_maps.data[0].attributes.depart} / ${data.data[i].attributes.description_maps.data[0].attributes.arrive} </span>
 
 
                 <div id="notes">
@@ -43,6 +43,11 @@ fetch(urlBdd)
 
                 <h3 class="titredutemoignage"> ${data.data[i].attributes.Titre} </h3>
                 <p class="descTemoignage"> ${data.data[i].attributes.Description} </p>
+
+                <div class="bottombillet">
+                    <p class="answers"> 0 réponse </p>
+                    <p class="lire">LIRE</p>
+                </div>
 
         </article>`
         article.innerHTML = generateHtml
