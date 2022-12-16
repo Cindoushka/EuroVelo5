@@ -94,21 +94,20 @@
 
 
 #gridaccueil {
-    width: 80%;
+    width: 1200px;
     margin: auto;
-        h2 {
+    padding-bottom: 40px;
+        .titregridaccueil {
             font-family: 'Poppins';
             font-size: 42px;
             text-align: center;
             font-weight: 300;
         }
-        p {
-            width: 70%;
+        .soustitregridaccueil {
             font-family: 'Mukta Mahee';
             color: #585858;
             font-weight: 500;
-            margin: 15px 0px;
             text-align: center;
-            margin: auto;
+            padding-bottom: 15px;
         }
 }

@@ -15,18 +15,5 @@
 //         }
 // }
 
-.boutontransparent {
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 8px 15px;
-    border: 2px white solid;
-    border-radius:5px;
-    text-decoration: none;
-    color: white;
-    font-family: 'Arial';
-    font-size: 0.8em ;
-    box-shadow: 1px 1px 2px gray;
-        &:hover {
-            background-color: rgba(255, 255, 255, 0.5);
-        }
-}
+
 

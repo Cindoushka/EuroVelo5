@@ -1,43 +1,68 @@
+// let urlImage="http://62.4.21.200:1337"
+// let url="http://62.4.21.200:1337/api/temoignage-detail2s?populate=*"
+
+//  fetch(url)
+// .then((response)=>response.json() )
+// .then((data) =>{
+
+    // let title=document.querySelector('.title')
+    // let details=document.querySelector('.details')
+    // let photo=document.querySelector('.photo')
+  
+   
+
+    // let GenerateTitle=`
+    // <h1> ${data.data[0].attributes.titre}</h1>
+    // `
+    // title.innerHTML=GenerateTitle
+
+    // var converter = new showdown.Converter();
+    // var text = data.data[0].attributes.details;
+    // var html = converter.makeHtml(text);
+    
+    
+    // let GenerateDetails=`
+    // <p> ${html}</p>
+    // `
+    // details.innerHTML=GenerateDetails
+
+
+    // let GeneratePhoto=`
+    // <img src="`+ urlImage + data.data[i].attributes.photo.data[0].attributes.formats.small.url +`">`
+
+    // photo.innerHTML=GeneratePhoto
+
+//     // HTMLFormControlsCollection.log( data.data[0].attributes.photo)
+// })
+
+
 let urlImage="http://62.4.21.200:1337"
 let url="http://62.4.21.200:1337/api/temoignage-detail2s?populate=*"
 
- fetch(url)
-.then((response)=>response.json() )
-.then((data) =>{
+let conteneur = document.querySelector(".itin")
+fetch(url)
+    .then(response => response.json())
+    .then(data =>{
+       
 
-    let title=document.querySelector('.title')
-    let details=document.querySelector('.details')
-    let photo=document.querySelector('.photo')
-    let list1=document.querySelector('.list1')
-    let list2=document.querySelector('.list2')
-   
-   
+        for(let i=0; i< data.meta.pagination.total; i++) {
+            let article = document.createElement("div")
+            var converter = new showdown.Converter();
+            var text = data.data[i].attributes.details;
+            var html = converter.makeHtml(text);
+            let generateHtml=`
+            <article class="itin">
+            <div class="left">
+                 <div class="photo"><img src="`+ urlImage + data.data[i].attributes.photo.data[0].attributes.formats.medium.url +`"></div>
+            </div> 
+            <div class="right">                
+                <div class="title"> <h1> ${data.data[i].attributes.titre}</h1></div>
+                <div class="details"> <p> ${html}</p></div>
+                <div class="discover"> <a href="#"> DÉCOUVRIR LEURS PARCOURS</a></div>
+            </div> 
+        </article>`
+        article.innerHTML = generateHtml
+        conteneur.append(article) 
+        }
 
-    let GenerateTitle=`
-    <h1> ${data.data[0].attributes.titre}</h1>
-    `
-    title.innerHTML=GenerateTitle
-
-
-    let GenerateDetails=`
-    <p> ${data.data[0].attributes.details}</p>
-    `
-    details.innerHTML=GenerateDetails
-
-    let GenerateList1=`
-    <ul><li> ${data.data[0].attributes.list1}</ul></li>
-    `
-    list1.innerHTML=GenerateList1
-
-    let GenerateList2=`
-    <ul><li> ${data.data[0].attributes.list2}</ul></li>
-    `
-    list2.innerHTML=GenerateList2
-
-    let GeneratePhoto=`
-    <img src="`+ urlImage + data.data[0].attributes.photo.data[0].attributes.formats.small.url +`">`
-
-    photo.innerHTML=GeneratePhoto
-
-    // HTMLFormControlsCollection.log( data.data[0].attributes.photo)
 })

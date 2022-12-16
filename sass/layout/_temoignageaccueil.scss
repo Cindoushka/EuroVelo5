@@ -1,0 +1,68 @@
+#blocphototemoignage {
+    width: 100%;
+    height: 75vh;
+    overflow: hidden;
+    display: flex;
+        .photodefondcoteneurtem {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: relative;
+            z-index: 1;
+        }
+        .blocdetextetemoignage {
+            width: 60%;
+            position: absolute;
+            z-index: 4;
+            margin-left: 20%;
+            color: white;
+            .titredubloctem{
+                font-family: 'Poppins';
+                font-size: 48px;
+                font-weight: 300;
+                margin-bottom: -10px;
+            }
+            .soustitredubloctem {
+                font-family: 'Mukta Mahee';
+                font-size: 18px;
+                font-weight: 500;
+                padding-bottom: 20px;
+            }
+            .boutontransparent {
+                background-color: rgba(255, 255, 255, 0.1);
+                padding: 8px 15px;
+                border: 2px white solid;
+                border-radius:5px;
+                text-decoration: none;
+                color: white;
+                font-family: 'Poppins';
+                font-size: 14px ;
+                box-shadow: 0 0 10px 0 rgb(0 0 0 / 30%);
+                text-align: center;
+                font-weight: 600;
+                    &:hover {
+                        background-color: rgba(255, 255, 255, 0.5);
+                    }
+            }
+        }
+}
+
+#billetstemoignage {
+    width : 80%;
+    text-align: center;
+    margin: auto;
+        .titrebillets {
+            font-family: 'Poppins';
+            font-size: 42px;
+            text-align: center;
+            font-weight: 300;
+        }
+        .soustitrebillets {
+            font-family: 'Mukta Mahee';
+            color: #585858;
+            font-weight: 500;
+            text-align: center;
+            // margin: auto;
+            padding-bottom: 15px;
+        }
+}
