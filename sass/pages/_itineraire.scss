@@ -50,6 +50,7 @@
                     color: $pinksite;
                     border-bottom: 3px solid $pinksite;
                 }
+                
             }
         }
         .itineraire-map-download{
@@ -142,15 +143,7 @@
                                 font-size: .875rem;
                                 
                             }
-                            .itineraire-map-informations-difficulte-habitude-blue{
-                                color: #3498DB;
-                            }
-                            .itineraire-map-informations-difficulte-habitude-red{
-                                color: #e6473e;
-                            }
-                            .itineraire-map-informations-difficulte-habitude-green{
-                                color: #56be81;
-                            }
+
                         }
                     }
                     &:hover .itineraire-map-informations-section{
@@ -176,5 +169,236 @@
                 }
             }
         }
+    }
+}
+
+.itineraire-map-informations-difficulte-habitude-blue{
+    color: #3498DB;
+}
+.itineraire-map-informations-difficulte-habitude-red{
+    color: #e6473e;
+}
+.itineraire-map-informations-difficulte-habitude-green{
+    color: #56be81;
+}
+
+.hidden{
+    display: none;
+}
+
+.itineraire-map-informations-second-section-header{
+   position: relative;
+   border-bottom: 1px solid #dfdfdf;
+   padding: 5px 70px 5px 50px;
+   font-family: "Mukta Mahee",sans-serif;
+    font-weight: 400;
+    h2 a{
+        text-decoration: none;
+        color: $pinksite;
+        margin: 0;
+        font-family: Poppins,sans-serif;
+        font-weight: 500;
+        font-size: .875rem;
+        display: block;
+    }
+    i{
+        position: absolute;
+        left: 15px;
+        top: 50%;
+        transform: translate(0,-50%);
+        font-size: 24px;
+        display: inline-block;
+        line-height: 1;
+        text-transform: none;
+        letter-spacing: normal;
+        word-wrap: normal;
+        white-space: nowrap;
+        color: black;
+    }
+}
+
+
+
+.itineraire-informations-second-section-options{
+    display: flex;
+    width: 100%;
+    a{
+        color: gray;
+        width: 50%;
+        padding-top: 20px;
+        padding-bottom: 15px;
+        cursor: pointer;
+        text-decoration: none;
+        text-align: center;
+        font-size: 12px;
+        font-weight: 600;
+        span p{
+            text-align: center;
+            font-family: 'Poppins', Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: inherit;
+            font-size: inherit;
+            margin: 0;
+            text-transform: uppercase;
+        }
+        &.actif{
+            color: $pinksite;
+            border-bottom: 3px solid $pinksite;
+        }
+    }
+}
+
+.itineraire-map-informations-second-body{
+    padding-bottom: 100px;
+    .itineraire-map-informations-second-body-theme{
+        font-family: "Mukta Mahee",sans-serif;
+        font-weight: 400;
+        background: #f59c00;
+        color: #fff;
+        max-width: 100%;
+        text-align: center;
+        padding: 10px 10px;
+        span{
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+            font-weight: 600;
+            font-size: 1rem;
+        }
+    }
+
+    .itineraire-map-informations-second-body-infos{
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        background: #f4f4f4;
+        padding: 10px 0;
+        font-family: "Mukta Mahee",sans-serif;
+        font-weight: 400;
+        .itineraire-map-informations-second-body-infos-distance, 
+        .itineraire-map-informations-second-body-infos-difficulte,
+        .itineraire-map-informations-second-body-infos-duree{
+            padding: 0 30px 0 0;
+            font-size: 1rem;
+            font-weight: 600;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+    }
+    .itineraire-map-informations-second-body-img-div{
+        width: 100%;
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+    .itineraire-map-informations-second-body-depart-arrive{
+        padding: 10px 15px;
+        background: #f4f4f4;
+        font-family: "Mukta Mahee",sans-serif;
+        font-weight: 500;
+        font-size: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        padding-left: 15px;
+        padding-right: 15px;
+        justify-content: space-between;
+        a{
+            text-decoration: none;
+            color: black
+        }
+        .itineraire-map-informations-second-body-arrive{
+            
+            text-align: right;
+        }   
+     }
+     .itineraire-map-informations-second-footer-top{
+        font-family: "Mukta Mahee",sans-serif;
+        font-weight: 400;
+        position: fixed;
+        z-index: 51;
+        width: 33%;
+        height: 40px;
+        bottom: 58px;
+        background: #f5f5f5;
+        box-shadow: 0 -4px 4px 0 rgba(0, 0, 0, 0.2);
+        padding: 10px 15px 0 15px;
+        display: block;
+        text-align: center;
+        .itineraire-map-informations-second-footer-row{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            margin-left: -15px;
+            margin-right: -15px;
+            .itineraire-map-informations-second-footer-btn{
+                    width: 33%;
+                a{
+                    padding-left: 5px;
+                    padding-right: 5px;
+                    text-align: center;
+                    text-decoration: none;
+                    color: $pinksite;
+                    position: relative;
+                    display: inline-block;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    line-height: 13px;
+                    font-size: .875rem;
+                }
+            }
+        }
+    }
+}
+
+.itineraire-map-informations-second-body-container{
+    .itineraire-map-informations-second-body-description{
+        white-space: pre-line;
+        font-family: "Mukta Mahee",sans-serif;
+        font-weight: 700;
+        font-size: 1.25rem;
+        margin-bottom: 30px;
+    }
+}
+
+.itineraire-map-informations-second-footer-bot{
+    font-family: "Mukta Mahee",sans-serif;
+    font-weight: 400;
+    position: fixed;
+    z-index: 10;
+    height: 28px;
+    top: auto!important;
+    bottom: 0!important;
+    padding: 15px;
+    width: 33%;
+    background: $pinksite;
+    transition: all .2s ease-out;
+    .itineraire-map-informations-second-footer-row{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -15px;
+        margin-right: -15px;
+        .itineraire-map-informations-second-footer-bot-btn{
+                width: 33%;
+            a{
+                padding-left: 5px;
+                padding-right: 5px;
+                text-decoration: none;
+                color: white;
+                position: relative;
+                display: inline-block;
+                font-weight: 700;
+                text-transform: uppercase;
+                line-height: 13px;
+                font-size: .875rem;
+            }
+        }
+        .itineraire-map-informations-second-footer-bot-btn-page{
+            text-align: center;
+                        }
     }
 }
