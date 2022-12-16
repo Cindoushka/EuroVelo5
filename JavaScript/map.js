@@ -110,7 +110,7 @@ fetch(descmapURL)
                             </span>
                         </div>
                         <h2>
-                            <a href="#">${data.data[i].attributes.titre}</a>
+                            <a href="#">${data.data[i].attributes.depart} > ${data.data[i].attributes.arrive}</a>
                         </h2>
                         <p class="itineraire-map-informations-description">
                         ${data.data[i].attributes.description}
@@ -155,7 +155,7 @@ let container2 = document.querySelector(".itineraire-map-informations-second-sec
                 </a>
                 <div>
                     <h2>
-                        ${data.data[i].attributes.titre}
+                        ${data.data[i].attributes.depart} >  ${data.data[i].attributes.arrive}
                     <a href="#">L'EuroVelo</a>
                     </h2>
                 </div>
@@ -203,19 +203,18 @@ let container2 = document.querySelector(".itineraire-map-informations-second-sec
                     </div>
                     <div class="itineraire-map-informations-second-body-depart-arrive">
                        <div class="itineraire-map-informations-second-body-depart">
-                           Calais
+                       ${data.data[i].attributes.depart}
                        </div>
                        <a href="#">
                            <i class="fa-solid fa-arrows-left-right"></i>
                        </a>
                        <div class="itineraire-map-informations-second-body-arrive">
-                           Cuisne
+                       ${data.data[i].attributes.arrive}
                        </div>
                     </div>
                           <div class="itineraire-map-informations-second-body-container">
                        <div class="itineraire-map-informations-second-body-description">
-                           Après une pause rafraîchissante au petit port , L'EuroVelo continue à travers la forêt domaniale de Sainte-Eulalie avant d’embrasser à nouveau l’océan.
-                           \nCe dernier vous dévoilera son plus beau visage dès votre arrivée sur la station familiale de Mimizan-Plage, aussi appelée la Perle de la Côte d’Argent.
+                       ${data.data[i].attributes.description}
                        </div>
                    </div>
                     <div class="itineraire-map-informations-second-footer-top">
