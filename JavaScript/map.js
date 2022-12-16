@@ -54,8 +54,11 @@ fetch(allURL)
             color: 'orange'
         });
       })
-      .on('click', function(){
+      .on('click', function(e){
+        testfunc()
+        map.fitBounds(e.target.getBounds());
         hoverSegment(data.data[i].id)
+        findMapDescByID(data.data[i].id)
       })
   .addTo(map);
 }})
@@ -64,8 +67,19 @@ fetch(allURL)
 
 
 function hoverSegment(e){
-  console.log(e)
+  fetch(descmapURL)
+  .then(response => response.json())
+  .then(data => {
+    for (let i = 0; i < data.meta.pagination.total; i++) {
+      if(data.data[i].attributes.id_infos == e){
+        console.log(data.data[i].attributes.titre)
+        $(".itineraire-map-informations-second-section").removeClass("hidden");
+        $(".itineraire-map-informations-first-section").addClass("hidden");
+      }
+    }
+  })
 }
+
 
 
 let container = document.querySelector(".itineraire-map-informations")
@@ -113,3 +127,155 @@ fetch(descmapURL)
     }
 
   })
+
+
+
+let container2 = document.querySelector(".itineraire-map-informations-second-section")
+
+
+  function findMapDescByID(e){
+
+  
+  fetch(descmapURL)
+  .then(response => response.json())
+  .then(data =>{
+
+    for (let i = 0; i < data.meta.pagination.total; i++) {
+      if(e == data.data[i].attributes.id_infos){
+        console.log(e)
+        console.log(data.data[i].attributes.id_infos)
+
+      let article = document.createElement("div")
+      article.setAttribute('id','itineraire-map-informations-tempdiv')
+      
+      let generateHTML = `
+      <div class="itineraire-map-informations-second-section-header">
+                <a href="#" id="back-arrow" class="itineraire-map-informations-second-section-backarrow" onclick="testfunc()">
+                <i class="fa-solid fa-arrow-left-long"></i>
+                </a>
+                <div>
+                    <h2>
+                        ${data.data[i].attributes.titre}
+                    <a href="#">L'EuroVelo</a>
+                    </h2>
+                </div>
+            </div>
+            <div class="itineraire-informations-second-section-options">
+                <div class="itineraire-informations-second-section-options actif">
+                    <a href="#" class="description actif">
+                        <span>
+                            <p>Description</p>
+                        </span>
+                    </a>
+                    <a href="#" class="avis inactif">
+                        <span>
+                            <p>Avis et Témoignages</p>
+                        </span>
+                    </a>
+                </div>
+            </div>
+            
+          
+          
+          <div class="itineraire-map-informations-second-body">
+        
+            <div class="itineraire-map-informations-second-body-theme ${data.data[i].attributes.habitude_nb == 1 ? "itineraire-map-informations-difficulte-habitude-blue": data.data[i].attributes.habitude_nb == 2 ? "itineraire-map-informations-difficulte-habitude-red": "itineraire-map-informations-difficulte-habitude-green"}">
+                <span>${data.data[i].attributes.habitude_nb == 1 ? "J'ai l'habitude": data.data[i].attributes.habitude_nb == 2 ? "Je me dépasse": "Je débute / En famille"}</span>
+            </div>
+            <div class="itineraire-map-informations-second-body-infos">
+                <div class="itineraire-map-informations-second-body-infos-distance">
+                    <span>31,13 Km</span>
+                </div>
+                <div class="itineraire-map-informations-second-body-infos-duree">
+                    <span>2 h 04 min</span>
+                </div>
+                <div class="itineraire-map-informations-second-body-infos-difficulte">
+                    <div class="niveau-difficulte">
+                        <span class="itineraire-map-informations-difficulte-habitude-green">
+                            Je débute / En famille
+                        </span>
+                    </div>
+                </div>
+            </div>
+          
+            <div class="itineraire-map-informations-second-body-img-div">
+                       <img src="Images/bruxelles.jpg" alt="">
+                    </div>
+                    <div class="itineraire-map-informations-second-body-depart-arrive">
+                       <div class="itineraire-map-informations-second-body-depart">
+                           Calais
+                       </div>
+                       <a href="#">
+                           <i class="fa-solid fa-arrows-left-right"></i>
+                       </a>
+                       <div class="itineraire-map-informations-second-body-arrive">
+                           Cuisne
+                       </div>
+                    </div>
+                          <div class="itineraire-map-informations-second-body-container">
+                       <div class="itineraire-map-informations-second-body-description">
+                           Après une pause rafraîchissante au petit port , L'EuroVelo continue à travers la forêt domaniale de Sainte-Eulalie avant d’embrasser à nouveau l’océan.
+                           \nCe dernier vous dévoilera son plus beau visage dès votre arrivée sur la station familiale de Mimizan-Plage, aussi appelée la Perle de la Côte d’Argent.
+                       </div>
+                   </div>
+                    <div class="itineraire-map-informations-second-footer-top">
+                       <div class="itineraire-map-informations-second-footer-row">
+                           <div class="itineraire-map-informations-second-footer-btn">
+                               <a href="#">
+                                   <i class="fa-solid fa-heart-circle-plus"></i>
+                                   <span>Carnet de Voyage</span>
+                               </a>
+                           </div>
+                           <div class="itineraire-map-informations-second-footer-btn">
+                               <a href="#">
+                                   <i class="fa-solid fa-download"></i>
+                                   <span>Tracé GPS</span>
+                               </a>
+                           </div>
+                           <div class="itineraire-map-informations-second-footer-btn">
+                               <a href="#">
+                                   <i class="fa-solid fa-print"></i>
+                                   <span>Fiche PDF</span>
+                               </a>
+                           </div>
+                       </div>
+                   </div>
+                    <div class="itineraire-map-informations-second-footer-bot">
+                       <div class="itineraire-map-informations-second-footer-row">
+                           <div class="itineraire-map-informations-second-footer-bot-btn">
+                               <a href="#">
+                                   <i class="fa-solid fa-arrow-left-long"></i>
+                                   <span>Étape Précédente</span>
+                               </a>
+                           </div>
+                           <div class="itineraire-map-informations-second-footer-bot-btn itineraire-map-informations-second-footer-bot-btn-page">
+                               <a href="#">
+                                   <span>5/10</span>
+                               </a>
+                           </div>
+                           <div class="itineraire-map-informations-second-footer-bot-btn">
+                               <a href="#">
+                                   <span>Étape Suivante</span>
+                                   <i class="fa-solid fa-arrow-right-long"></i>
+                               </a>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+`
+      article.innerHTML = generateHTML
+      
+      container2.append(article)
+    
+    }
+  }
+  })
+}
+
+function testfunc(){
+  const e = document.getElementById('itineraire-map-informations-tempdiv')
+  if(e )
+  e.remove();
+    $(".itineraire-map-informations-second-section").addClass("hidden");
+    $(".itineraire-map-informations-first-section").removeClass("hidden");
+}
