@@ -17,6 +17,7 @@
                     border-radius: 5px;
                     position: relative;
                     object-fit: cover;
+                    transition: all 200ms ease-in-out;
                 }
                 #textepourimagetem {
                     display: flex;
@@ -45,12 +46,12 @@
                 }
                 &:hover {
                     .imgducarousselt {
-                        filter:blur(3px);
+                        filter:blur(5px);
                         transform: scale(1.2);
                         border-radius: 5px;
                     }
                     .textetemoignagec {
-                        margin-bottom: 100px;
+                        transform: translate(0, -55px);
                     }
                 }
         }
