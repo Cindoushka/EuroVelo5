@@ -1,21 +1,26 @@
-
-$(document).ready(function () {
     $(".gps.inactif").click(function () {
       $(".etapes").removeClass("actif");
       $(".etapes").addClass("inactif");
       $(".gps").removeClass("inactif");
       $(".gps").addClass("actif");
+      $(".itineraire-map-informations-gps").addClass("actif");
+      $(".itineraire-map-informations-gps").removeClass("hidden");
+      $(".itineraire-map-informations").removeClass("actif");
+      $(".itineraire-map-informations").addClass("hidden");
     });
-  });
 
-  $(document).ready(function () {
+
     $(".etapes").click(function () {
       $(".gps").removeClass("actif");
       $(".gps").addClass("inactif");
       $(".etapes").removeClass("inactif");
       $(".etapes").addClass("actif");
+      $(".itineraire-map-informations-gps").addClass("hidden");
+      $(".itineraire-map-informations-gps").removeClass("actif");
+      $(".itineraire-map-informations").removeClass("hidden");
+      $(".itineraire-map-informations").addClass("actif");
     });
-  });
+
 
 
 

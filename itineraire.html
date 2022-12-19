@@ -19,7 +19,6 @@
     integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
     crossorigin=""></script>
 
-    
     <title>Via Romea Francigena - Plus de 1000kms de la Belgique au Nord de la France</title>
 </head>
 <body class="itineraire-body">
@@ -94,18 +93,36 @@
                 </a>
             </div>
 
-            <div class="itineraire-map-informations">
+            <div class="itineraire-map-informations actif">
             </div>
         </div>
 
+        <div class="itineraire-map-informations-gps hidden">
+            
+            <div class="itineraire-global-gps">
+                <form class="itineraire-global-gps-form">
+                    <div class="itineraire-global-gps-form-field">
+                        <div class="field-etape" data-id="0" draggable="true">
+                            <div class="field">
+                                <input data-id="0" class="autocomplete-address" type="text" autocomplete="off" placeholder="Lieu de départ">
+                            </div>
+                        </div>
+                        <div class="field-etape" data-id="1" draggable="true">
+                            <div class="field">
+                                <input data-id="1" class="autocomplete-address" type="text" autocomplete="off" placeholder="Lieu d'arrivée">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+        </div>
 
 
         <div class="itineraire-map-informations-second-section hidden">
             
             </div>
         </div>
-
-
 
     <div id="map"></div>
 
@@ -118,10 +135,6 @@
    <script src="javascript/scrollingNav.js"></script>
    <script src="javascript/map.js"></script>
    <script src="javascript/itineraire.js"></script>
-
-   
-   
-
    
 </body>
 </html>

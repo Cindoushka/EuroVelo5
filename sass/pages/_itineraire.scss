@@ -1,3 +1,12 @@
+html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
+
 .nav-itineraire{
     background-color: white;
     div a{
@@ -170,6 +179,31 @@
                 }
             }
         }
+        .itineraire-map-informations-gps{
+            background: $pinksite;
+            position: relative;
+            .itineraire-global-gps-form{
+                padding: 30px;
+
+            }
+            .itineraire-global-gps-form-field{
+                .field-etape .field input {
+                transition: all .2s ease-out;
+                background: 0 0;
+                width: 100%;
+                border: none;
+                border-bottom: 1px solid rgba(255,255,255,.5);
+                padding: 10px 40px 10px 0;
+                color: #fff;
+                font-family: "Mukta Mahee",sans-serif;
+                font-weight: 600;
+                font-size: .9375rem;
+                &::placeholder{
+                    color: #fff;
+                }
+                }
+            }
+        }
     }
 }
 
@@ -184,7 +218,7 @@
 }
 
 .hidden{
-    display: none;
+    display: none!important;
 }
 
 .itineraire-map-informations-second-section-header{
@@ -483,6 +517,89 @@
                 font-weight: 600;
             }
         }
-        
+    }
+}
+
+@media screen and (max-width: 390px){
+    .itineraire-main{
+        margin-top: 80px;
+    }
+    #map{
+        display: none;
+    }
+    .itineraire-main{
+        .itineraire-map-left{
+            width: 100%
+        }
+    }
+    .itineraire-main 
+    .itineraire-map-left 
+    .itineraire-map-informations-first-section
+    .itineraire-map-informations 
+    div
+    .itineraire-map-informations-section
+    .itineraire-map-informations-global-div {
+        height: 125px;
+        width: 100%;
+        .itineraire-map-informations-image-div{
+            height: 125px;
+            width: 90px;
+            img{
+                height: 125px;
+                width: 90px;
+            }
+        }
+        .itineraire-map-informations-text-global {
+            width: 100%;
+            .itineraire-map-informations-description{
+                display:none;
+            }
+        }
+    }
+    .itineraire-main .itineraire-map-left .itineraire-map-informations div .itineraire-map-informations-section .itineraire-map-informations-global-div .itineraire-map-informations-text-global h2{
+        font-size: .875rem;
+    }
+    .itineraire-map-informations-second-footer-top{
+        bottom: 0;
+        width: 100%;
+    }
+    .itineraire-map-informations-second-footer-bot{
+        display: none;
+    }
+    .itineraire-map-avis-div-global #itineraire-temoignages .itineraire-map-avis-temoignages .itineraire-map-avis-img{
+        width: 100%;
+    }
+    .itineraire-map-avis-div-global{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .itineraire-map-avis-div-global #itineraire-temoignages .itineraire-map-avis-temoignages .itineraire-map-avis-title{
+        text-align: center;
+    }
+    .itineraire-map-avis-div-global #itineraire-temoignages .itineraire-map-avis-comments-avis-notes{
+        display: flex;
+        width: 100%;
+        max-width: 100%;
+        text-align: center;
+        justify-content: center;
+        margin-top: 20px;
+    }
+    .itineraire-map-avis-div-global #itineraire-temoignages .itineraire-map-avis-comments-avis{
+        text-align: center;
+    }
+    .itineraire-map-avis-comments-avis-row{
+        flex-direction: column;
+    }
+    .itineraire-map-avis-div-global #itineraire-temoignages .itineraire-map-avis-comments-avis .itineraire-map-avis-comments-avis-soustitre{
+        text-align: center;
+        margin-top: 10px;
+    }
+    .itineraire-map-avis-div-global #itineraire-temoignages .itineraire-map-avis-comments-avis h2{
+        font-size: 1.75rem;
+    }
+
+    .itineraire-map-informations-second-body-container .itineraire-map-informations-second-body-description{
+        margin-left: 10px
     }
 }
