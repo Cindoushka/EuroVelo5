@@ -1,13 +1,14 @@
 #blocdelagrid {
-    width: 100%;
+    width: 1050px;
     display: grid;
-    grid-template-rows: repeat(3, 370px);
+    grid-template-rows: repeat(3, 335px);
     grid-template-columns: 1fr 1fr 1fr;
     padding: 10px;
-    grid-gap: 30px;
+    grid-gap: 35px;
+    margin: auto;
         img {
-            width: 370px;
-            height: 370px;
+            width: 335px;
+            height: 335px;
             object-fit: cover;
             position: relative;
             z-index: 2;
@@ -16,8 +17,8 @@
         }
         #textepourlagridaccueil {
             position: absolute;
-            width: 370px;
-            height: 370px;
+            width: 335px;
+            height: 335px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -42,10 +43,12 @@
             text-decoration: none;
             display: flex;
             overflow: hidden;
-            width: 370px;
-            height: 370px;
+            width: 335px;
+            height: 335px;
             border-radius: 5px;
                 &:hover {
+                    box-shadow: 0 0px 10px 0 rgba(0,0,0,.2);
+
                     img {
                     filter: blur(2px);
                     transform: scale(1.2);

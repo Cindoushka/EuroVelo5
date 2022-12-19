@@ -33,7 +33,7 @@ window.addEventListener('scroll', () => {
   }
   lastScroll = currentScroll
 
-  console.log(lastScroll)
+  // console.log(lastScroll)
 })
 
 

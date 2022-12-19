@@ -2,6 +2,9 @@
 
 @import "vendors/normalize.css";
 
+// BASE 
+
+@import "base/base";
 
 // UTILS 
 
@@ -24,12 +27,15 @@
 @import "layout/accueilvelo";
 @import "layout/gridaccueil";
 @import "layout/temoignageaccueil";
+@import "layout/billetstemoignage";
+@import "layout/temoignagecaroussel";
 
 // PAGES
 
 @import "pages/home";
 @import "pages/itineraire";
 @import "pages/infospratiques";
+@import "pages/mentionslegales";
 
 
 // pages

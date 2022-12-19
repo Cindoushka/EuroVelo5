@@ -1,6 +1,6 @@
 #blocphototemoignage {
     width: 100%;
-    height: 75vh;
+    height: 700px;
     overflow: hidden;
     display: flex;
         .photodefondcoteneurtem {
@@ -11,43 +11,155 @@
             z-index: 1;
         }
         .blocdetextetemoignage {
-            width: 60%;
+            width: 100%;
             position: absolute;
             z-index: 4;
-            margin-left: 20%;
             color: white;
+            margin-top: 25px;
             .titredubloctem{
+                width: 60%;
                 font-family: 'Poppins';
                 font-size: 48px;
                 font-weight: 300;
                 margin-bottom: -10px;
+                margin-left: 6%;
             }
             .soustitredubloctem {
+                width: 60%;
                 font-family: 'Mukta Mahee';
                 font-size: 18px;
                 font-weight: 500;
                 padding-bottom: 20px;
+                margin-left: 6%;
             }
-            .boutontransparent {
-                background-color: rgba(255, 255, 255, 0.1);
-                padding: 8px 15px;
-                border: 2px white solid;
-                border-radius:5px;
-                text-decoration: none;
-                color: white;
-                font-family: 'Poppins';
-                font-size: 14px ;
-                box-shadow: 0 0 10px 0 rgb(0 0 0 / 30%);
-                text-align: center;
-                font-weight: 600;
-                    &:hover {
-                        background-color: rgba(255, 255, 255, 0.5);
+            .boutondutemoignage {
+                margin-top: 360px;
+                display: flex;
+                justify-content: space-between;
+                // align-items: center;
+                .boutontransparent {
+                    background-color: rgba(255, 255, 255, 0.1);
+                    padding: 12px 15px;
+                    border: 2px white solid;
+                    border-radius:5px;
+                    text-decoration: none;
+                    color: white;
+                    font-family: 'Poppins';
+                    font-size: 14px ;
+                    box-shadow: 0 0 10px 0 rgb(0 0 0 / 30%);
+                    text-align: center;
+                    font-weight: 600;
+                    margin-left: 6%;
+                    bottom: 10;
+                    position: absolute;
+                        &:hover {
+                            background-color: rgba(255, 255, 255, 0.5);
+                        }
+                    }
+                }
+                .lesfleches {
+                    position: absolute;
+                    margin-left: 88%;
+                    margin-top: 305px;
+                        img {
+                            width: 18px;
+                            padding: 15px;
+                            margin: 5px;
+                            border: 2px solid rgba(0,0,0,0.0);
+                            cursor: pointer;
+                            &:hover { 
+                                border-radius: 100%;
+                                border: 2px white solid;
+                            }
+                        }
+
+                
+            }
+            #carousseltemoignage {
+                display: flex; 
+                gap: 25px;
+                width: 97vw;
+                margin: 30px auto 0px auto;
+                overflow: hidden;
+                padding: 5px;
+                margin-left: 10px;
+                // z-index: 999; 
+                // position: absolute;
+                    .liendudiapotem {
+                        display: flex;
+                        border-radius: 5px;
+                        overflow: hidden;
+                            .imgducarousselt {
+                                width: 470px;
+                                height: 265px;
+                                border-radius: 5px;
+                                position: relative;
+                                object-fit: cover;
+                            }
+                            #textepourimagetem {
+                                display: flex;
+                                flex-direction: column;
+                                position: absolute;
+                                align-items: center;
+                                width: 470px;
+                                height: 265px;
+                                    .coeurcaroussel {
+                                        width: 20px;
+                                        height: 20px;
+                                        margin-top: 10px;
+                                        margin-left: 430px;
+                                    }
+                                    .textetemoignagec {
+                                        transition: all 200ms ease-in-out;
+                                        width: 70%;
+                                        text-decoration: none;
+                                        color: white;
+                                        font-family: 'Mukta Mahee';
+                                        font-size: 24px;
+                                        text-align: center;
+                                        margin-top: 130px;
+                                    }
+            
+                            }
+                            &:hover {
+                                .imgducarousselt {
+                                    filter:blur(3px);
+                                    transform: scale(1.2);
+                                    border-radius: 5px;
+                                }
+                                .textetemoignagec {
+                                    margin-bottom: 100px;
+                                }
+                            }
                     }
             }
         }
 }
 
-#billetstemoignage {
+#headbilletstemoignages {
     width : 80%;
     text-align: center;
+    margin: auto;
+        .titrebillets {
+            font-family: 'Poppins';
+            font-size: 42px;
+            text-align: center;
+            font-weight: 300;
+        }
+        .soustitrebillets {
+            font-family: 'Mukta Mahee';
+            color: #585858;
+            font-weight: 500;
+            text-align: center;
+            // margin: auto;
+            padding-bottom: 15px;
+        }
+}
+
+.dissmiss .arrowleft {
+    display:none;
+}
+
+.dissmiss .arrowright {
+    display:none;
 }
