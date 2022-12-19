@@ -1,4 +1,4 @@
-var map = L.map('map').setView([50.9652183, 1.8630816], 1);
+var map = L.map('map').setView([50.7606273570878, 2.2339190414235413], 10);
 const mapURL= "http://62.4.21.200:1337"
 const allURL= "http://62.4.21.200:1337/api/infos-maps?populate=*";
 const descmapURL= "http://62.4.21.200:1337/api/description-maps?populate=*";
@@ -52,8 +52,8 @@ fetch(allURL)
             
           }
         })
-        .on('loaded', function(e) {
-        map.fitBounds(e.target.getBounds());
+        .on('loaded', function() {
+        map.setView([50.7606273570878, 2.2339190414235413], 10)
       })
       .on('mouseover', function() {
         this.setStyle({
@@ -70,20 +70,10 @@ fetch(allURL)
         map.fitBounds(e.target.getBounds());
         hoverSegment(data.data[i].id)
         findMapDescByID(data.data[i].id)
-        if(e.layer.selected){
-          this.setStyle({
-            color: 'orange'
-          })
-          e.layer.selected = false;
-        } else{
-          this.setStyle({
-            color: '#e5b9d5' 
-        })
-          e.layer.selected = true;
-        }
       })
   .addTo(map);
 }})
+
 
 
 
