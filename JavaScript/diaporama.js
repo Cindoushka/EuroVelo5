@@ -6,6 +6,7 @@ let timer, elements, slides;
 window.onload = () => {
     //On récupère le diapo
 
+    
     const diapo = document.querySelector(".diapo");
 
     elements =  document.querySelector(".elements");
@@ -56,7 +57,6 @@ function slideNext() {
             elements.style.transform = "translateX(0)" 
          if (compteur == 0) {
         reperes[0].classList.add("swipebullet-active")
-
     }
         }
     }, 1000)
@@ -72,5 +72,4 @@ function slideNext() {
     reperes[compteur].classList.add("swipebullet-active")
     }
 }
-
 

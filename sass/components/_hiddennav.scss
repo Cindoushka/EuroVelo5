@@ -54,3 +54,19 @@ header {
 .scroll-down nav {
     transform: translate(0, -55px);
 }
+
+@media screen and (max-width: 390px) {
+   
+   header {
+    display: none;
+   }
+
+   .scroll-down header {
+    transform: none;
+   }
+
+   .scroll-down nav {
+    transform: none;
+   }
+
+}

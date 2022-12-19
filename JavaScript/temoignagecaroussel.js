@@ -23,7 +23,7 @@ fetch(urlBddTest)
                     </div>
                 </a>`
 
-                console.log(data.data[i].attributes.Picture.data[0].attributes.formats.medium.url)
+                // console.log(data.data[i].attributes.Picture.data[0].attributes.formats.medium.url)
 
                 article.innerHTML = generateHtml
                 containerCar.append(article) 
@@ -85,8 +85,6 @@ fetch(urlBddTest)
     let prevButton = document.querySelector(".arrowleft");
 
 
-window.onload = () => {
-    //On récupère le diapo
 
 
     nextButton.addEventListener("click", slideNextButton);
@@ -94,7 +92,7 @@ window.onload = () => {
     prevButton.addEventListener("click", slidePrevButton);
 
 
-}
+
 
 // Fonction pour le défilement des diapos
 

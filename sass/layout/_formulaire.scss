@@ -35,3 +35,13 @@
             cursor: pointer;
         }
 }
+
+@media screen and (max-width: 390px) { 
+    #formulaireparcours {
+        width: 280px;
+        padding: 20px;
+        p {
+            text-align: center;
+        }
+    }
+}
