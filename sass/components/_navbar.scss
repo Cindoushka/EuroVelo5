@@ -85,15 +85,19 @@ nav {
 
 @media screen and (max-width: 390px) { 
     nav {
-        // position: fixed;
-        // transform: translate(0, 0);
-        // top: 0;
-        // width: 100vw;
-        display: none;
+        position: fixed;
+        transform: translate(0, 0);
+        top: 0;
+        width: 100vw;
+        // display: none;
     }
     #navbar {
-        // width: 100%;
-        display:none;
+        width: 100%;
+        // display:none;
+        justify-content: space-between;
+        .imgnav {
+            height: 40px;
+        }
         .nav, .navambassadeurs {
             display: none;
         }
