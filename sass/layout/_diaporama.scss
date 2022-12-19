@@ -73,3 +73,34 @@
 .diapo {
     overflow: hidden;
 }
+
+
+@media screen and (max-width: 390px) {
+    .diapo {
+        width: 100vw;
+        height: 60vh;
+    }
+    .caption1 {
+        top: 13vh;
+        margin: auto;
+    }
+
+    .caption  {
+        top: 40vh;
+        margin: auto;
+    }
+    .hometitle {
+        font-size: 40px;
+        text-align: center; 
+        width: 80%;
+        margin: auto;
+    }
+    .homesubtitle {
+        font-size: 26px;
+        text-align: center; 
+        width: 85%;
+        padding: 10px 0px;
+        margin: auto;
+
+    }
+}

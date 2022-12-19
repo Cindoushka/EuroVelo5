@@ -72,19 +72,17 @@
                                 border: 2px white solid;
                             }
                         }
-
-                
             }
             #carousseltemoignage {
                 display: flex; 
                 gap: 25px;
-                width: 97vw;
+                width: 98vw;
                 margin: 30px auto 0px auto;
                 overflow: hidden;
                 padding: 5px;
                 margin-left: 10px;
-                // z-index: 999; 
-                // position: absolute;
+                z-index: 999; 
+                position: absolute;
                     .liendudiapotem {
                         display: flex;
                         border-radius: 5px;
@@ -128,8 +126,8 @@
                                     border-radius: 5px;
                                 }
                                 .textetemoignagec {
-                                    margin-bottom: 100px;
-                                }
+                                      transform: translate(0, -55px);
+}           
                             }
                     }
             }
@@ -162,4 +160,60 @@
 
 .dissmiss .arrowright {
     display:none;
+}
+
+
+@media screen and (max-width: 390px) {
+
+    #blocphototemoignage {
+        .photodefondcoteneurtem {
+            display: none;
+        }
+        .blocdetextetemoignage {
+            color: black;
+            text-align: center;
+            margin: auto;
+            width: 100%;
+            .titredubloctem {
+                width: 80%;
+                font-size: 30px;
+                margin: auto;
+            }
+            .soustitredubloctem {
+                width: 80%;
+                line-height: 1.5rem;
+                font-size: 16px;
+                margin: auto;
+                padding: 10px;
+                color: #585858;
+            }
+            #carousseltemoignage {
+                width: 95%;
+                gap: 0px;
+                margin: 0px;
+                padding: 0px;
+                .liendudiapotem {
+                    width: 90%;
+                    margin: auto;
+                .imgducarousselt {
+                    width: 375px;
+                    height: 250px;
+                }
+                #textepourimagetem {
+                    height: 250px;
+                    width: 90%;
+                    .coeurcaroussel {
+                        margin-left: 310px;
+                        width: 15px;
+                    }
+                }
+            }
+            }
+            .lesfleches {
+                margin-left: 0%;
+            }
+        }
+    }
+
+
 }

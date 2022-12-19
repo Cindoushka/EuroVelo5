@@ -77,3 +77,43 @@
     }
 }
 
+@media screen and (max-width: 390px) {
+    .findaccueil {
+        width: 80%;
+    }
+    .texteaccueilvelo {
+        // flex-wrap: wrap;
+            .imgav {
+                float: none;
+                padding-right: 0px;
+                margin-left: 45%;
+            }
+            .petittitre{
+                text-align: center;
+                font-size: 1.6rem;
+            }
+            .descriptionAV {
+                line-height: 1.5rem;;
+            }
+    }
+
+    #contenairemenuaccueil {
+        flex-wrap: wrap;
+        gap: 10px;
+        .tesdutmenu {
+            width: 100%;
+            .liendelaflexalacon {
+                width: 100%;
+            }
+            .imgtest {
+                width: 100%;
+                object-fit: cover;
+                height: 100px;
+            }
+            .textimage, .textimage2, .textimage3 {
+                width: 80%;
+                padding: 41px 0px;
+            }
+        }
+    }
+}

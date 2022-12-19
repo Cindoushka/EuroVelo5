@@ -92,3 +92,18 @@
     cursor: pointer;
 }
 
+@media screen and (max-width: 390px) {
+    .boutonleft, .boutonmiddle {
+        display: none;
+    }
+    .boutonright {
+        margin-left: 8%;
+        font-size: 12px;
+        padding : 10px 33px;
+    }
+
+    #containerform {
+        width: 70%;
+        margin: auto;
+    }
+}
