@@ -128,34 +128,31 @@
     flex-wrap: wrap;
     margin:0;
     width: 100%;
- }
- div.photo img{
     
-    display: block;
-    height: auto;
+}
+     
+ div.photo img{    
     box-shadow: 0 40px 60px 0 rgb(0 0 0 / 18%);
-    width: auto;
+    width: 100%;
+    border-radius: 20px;
     
    
 }
 
         article div.left{
-           margin-top: 30px;
-           width: 45%;
-           margin-left: 0px;
+           margin-top: 25px;
+           width: 47%;
            height: auto;
            border-radius: 10px;
+           padding-left: 25px;
            
        }
        article div.right{ 
             
             width: 50%;
-            margin: auto 0px auto -40px;
-            padding: 70px 50px 20px;
+            margin: auto auto ;
             border-radius: 8px;
-            background-color: #fff;
-            box-shadow: 0 40px 60px 0 rgb(0 0 0 / 18%);
-            position: relative;
+          
       }
       h1{  
         margin: 0;
@@ -165,8 +162,13 @@
 
     }
 
+   
+
         .details{
-            width: 100%;
+            border-radius: 20px;
+            padding: 40px 20px;
+            background: #fff;
+            width: 98%;
             margin: auto;
             font-size: 1.125rem;
             color: #585858;
@@ -176,11 +178,14 @@
             margin-bottom: 15px;
             font-family: "Mukta Mahee",sans-serif;
             font-weight: 500;
+            box-shadow: 0 40px 60px 0 rgb(0 0 0 / 18%);
         }
        
-        
+  div.discover{
+    max-width: 320px ;
+  }      
 .discover{
-    margin-left: 40px;
+    margin: auto;
 }
  .discover a{
         display: inline-block;
@@ -192,7 +197,6 @@
         text-decoration: none;
         color: #fff;
         background: $pinksite;
-        position: relative;
         border-radius: 5px;
         border: none;
         box-shadow: 0 0 10px 0 rgb(0 0 0 / 30%);
@@ -200,9 +204,9 @@
         width: 290px;
         margin: auto;
 }
-// span{
-//     color: black;
-// }
+span{
+    color: black;
+}
 .format{
     margin-left: 12%;
     margin-right: 12%;
@@ -288,10 +292,10 @@ div.laast{
 .img-amb{
     position: absolute;
     z-index: 2;
-    padding-top: 100px;
+    padding-top: 50px;
     padding-bottom: 50px;
     margin-left:10% ;
-    height: 300px; 
+    height: 280px; 
     width: 400px;
     // overflow: hidden;
     
@@ -309,7 +313,7 @@ div.laast{
 
 .text-info{
     position: absolute;
-    top: 400px;
+    top: 350px;
     z-index: 1;
     left: 80px;
     font-family: "Mukta Mahee",sans-serif;
