@@ -14,11 +14,17 @@ nav {
 
 #navbar {
     display: flex;
-    justify-content: space-around;
     align-items: center;
     width: 100%;
+    justify-content: space-between;
     // position:fixed;
     left: 0;
+    .liensdelanav {
+        display: flex;
+        gap: 70px;
+        margin: 0px 50px;
+        align-items: center;
+    }
     a {
     font-family: 'Poppins';
     font-weight: 600;
@@ -35,8 +41,7 @@ nav {
     }
     .loupe {
         width: 25px;
-        padding-right: 25px;
-        padding-left: 15%;
+        padding-right: 50px;
     }
     .navambassadeurs {
         color: $pinksite;
