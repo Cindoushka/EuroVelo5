@@ -1,4 +1,4 @@
-var map = L.map('map').setView([50.9652183, 1.8630816], 1);
+var map = L.map('map').setView([50.7606273570878, 2.2339190414235413], 10);
 const mapURL= "http://62.4.21.200:1337"
 const allURL= "http://62.4.21.200:1337/api/infos-maps?populate=*";
 const descmapURL= "http://62.4.21.200:1337/api/description-maps?populate=*";
@@ -52,8 +52,8 @@ fetch(allURL)
             
           }
         })
-        .on('loaded', function(e) {
-        map.fitBounds(e.target.getBounds());
+        .on('loaded', function() {
+        map.setView([50.7606273570878, 2.2339190414235413], 10)
       })
       .on('mouseover', function() {
         this.setStyle({
@@ -70,20 +70,10 @@ fetch(allURL)
         map.fitBounds(e.target.getBounds());
         hoverSegment(data.data[i].id)
         findMapDescByID(data.data[i].id)
-        if(e.layer.selected){
-          this.setStyle({
-            color: 'orange'
-          })
-          e.layer.selected = false;
-        } else{
-          this.setStyle({
-            color: '#e5b9d5' 
-        })
-          e.layer.selected = true;
-        }
       })
   .addTo(map);
 }})
+
 
 
 
@@ -126,11 +116,14 @@ fetch(descmapURL)
                     </div>
                     <div class="itineraire-map-informations-text-global">
                         <div class="itineraire-map-informations-habitude">
-                            <span>${data.data[i].attributes.type}</span>
+                            <span>
+                            ${data.data[i].attributes.type}
+                            </span>
                         </div>
                         <div class="itineraire-map-informations-difficulte">
                             <span class="itineraire-map-informations-difficulte-habitude ${data.data[i].attributes.habitude_nb == 1 ? "itineraire-map-informations-difficulte-habitude-blue": data.data[i].attributes.habitude_nb == 2 ? "itineraire-map-informations-difficulte-habitude-red": "itineraire-map-informations-difficulte-habitude-green"}">
                             ${data.data[i].attributes.habitude_nb == 1 ? "J'ai l'habitude": data.data[i].attributes.habitude_nb == 2 ? "Je me dépasse": "Je débute / En famille"}
+                            <span class="dot ${data.data[i].attributes.habitude_nb == 1 ? "dot-blue": data.data[i].attributes.habitude_nb == 2 ? "dot-red": "dot-green"}"></span>
                             </span>
                         </div>
                         <h2>
@@ -200,8 +193,10 @@ let container2 = document.querySelector(".itineraire-map-informations-second-sec
           <div class="itineraire-map-informations-second-body actif">
         
             <div class="itineraire-map-informations-second-body-theme ${data.data[i].attributes.habitude_nb == 1 ? "itineraire-map-informations-difficulte-habitude-blue": data.data[i].attributes.habitude_nb == 2 ? "itineraire-map-informations-difficulte-habitude-red": "itineraire-map-informations-difficulte-habitude-green"}">
-                <span>${data.data[i].attributes.habitude_nb == 1 ? "J'ai l'habitude": data.data[i].attributes.habitude_nb == 2 ? "Je me dépasse": "Je débute / En famille"}</span>
-            </div>
+                <span>${data.data[i].attributes.habitude_nb == 1 ? "J'ai l'habitude": data.data[i].attributes.habitude_nb == 2 ? "Je me dépasse": "Je débute / En famille"}
+                </span>
+
+                </div>
             <div class="itineraire-map-informations-second-body-infos">
                 <div class="itineraire-map-informations-second-body-infos-distance">
                     <span>31,13 Km</span>
@@ -211,8 +206,10 @@ let container2 = document.querySelector(".itineraire-map-informations-second-sec
                 </div>
                 <div class="itineraire-map-informations-second-body-infos-difficulte">
                     <div class="niveau-difficulte">
-                        <span class="itineraire-map-informations-difficulte-habitude-green">
-                            Je débute / En famille
+                        <span class="${data.data[i].attributes.habitude_nb == 1 ? "itineraire-map-informations-difficulte-habitude-blue": data.data[i].attributes.habitude_nb == 2 ? "itineraire-map-informations-difficulte-habitude-red": "itineraire-map-informations-difficulte-habitude-green"}">
+                        <span>${data.data[i].attributes.habitude_nb == 1 ? "J'ai l'habitude": data.data[i].attributes.habitude_nb == 2 ? "Je me dépasse": "Je débute / En famille"}
+                            <span class="dot ${data.data[i].attributes.habitude_nb == 1 ? "dot-blue": data.data[i].attributes.habitude_nb == 2 ? "dot-red": "dot-green"}"></span>
+
                         </span>
                     </div>
                 </div>

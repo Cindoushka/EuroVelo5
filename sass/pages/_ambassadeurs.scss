@@ -24,7 +24,7 @@
     font-family: "Poppins";
     width: 80%;
     position: relative;
-    top: -500px;
+    top: -400px;
     margin: 0px auto 50px auto;
     z-index: 2;
   
@@ -138,6 +138,14 @@
     
    
 }
+.details h1{
+     
+        margin: 0;
+        font-family: Poppins,sans-serif;
+        font-weight: 600;
+        font-size: 1.5rem;
+   
+}
 
         article div.left{
            margin-top: 25px;
@@ -219,6 +227,7 @@
         }
         .titre{
         padding-bottom: 70px;
+        text-align: center;
         }
 }
 
@@ -318,6 +327,30 @@ div.laast{
     
 }
 @media screen and (max-width: 400px) {
+    .wallpaper{
+        object-fit: cover;
+        margin: 0 ;
+        height: 300px;
+        width: 100%;
+    }
+
+    .discover{
+        margin-left: 34px;
+        margin-bottom: 30px;
+    }
+    .page-titre{
+        font-family: 'Poppins', sans-serif;
+        font-weight: 700;
+        font-size: 1.432rem;
+        text-align: center;
+        color: white;
+        font-family: "Poppins";
+        width: 80%;
+        position: relative;
+        top: -200px;
+        margin: 0px auto 50px auto;
+        z-index: 2;
+        }
     .context .row{
         margin:0 2%;
         width: 98%;
@@ -335,11 +368,18 @@ div.laast{
         margin-left: 30px    
      }
      article.itin{
+        padding-top: 50px;
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
         margin-left: 0px;
         width: 98%;
+     }
+     .details h1{
+        text-align:center;
+     }
+     div.context{
+        margin-top: -100px;
      }
      div.format{
         margin-left :2px;
@@ -347,28 +387,98 @@ div.laast{
         width: 95%;
      }
     article div.right{
-        margin: 0px 0px ;
         width: 98%;
         padding-left: 0px;
+        order: 2;
+        margin: 0 1%;
+        margin-bottom: 10px;        
      }
      article div.left{
-        margin: 0px 0px;
-        width: 98%;
+        
+        margin-bottom: -40px;
+        width: 100%;
+        z-index: 20;
+        box-shadow: none;
+        margin-left: -5px;
+        
      }
+    
      div.details{
         margin: 0 2%;
+        margin-bottom: 10px;
         width: 95%    
      }
      div.photo{
-        width: 98%;
-        height: 300px;
-        width: 99%;
+        width: 100%;
+        height: auto;
+        box-shadow: none;
+        border-radius: 2px;
             img{
-                order: 1;
-                height: 300px;
+                
+                height: auto;
                 object-fit: cover;
-                width: 99%;
+                max-width: 100%;
+                box-shadow: none;
+                border-radius: 2px;
             }
      }
+     div.parcours{
+        margin:0 2% 0 2%;
+            h2{
+                text-align: center;               
+            }
+     }
+
+     div.mapid{
+        margin: 0 2% 0 2%;
+        width: 96%;
+        height: auto;
+     }
     
+     div p.fb{
+        padding-top: 30px;
+        margin-left:2%;
+        margin-right: 2%;
+        text-align: justify;
+        width: 96%;
+     }
+
+     div.laast{
+        margin-left: 2%;
+        margin-right: 2%;
+        padding-bottom: 0px;
+     }
+     div.viaoromfr{
+        margin-left:2%;
+        width: 100%;
+     }
+     img.via-img{
+        margin:0 2%;
+        width: 98%;
+        object-fit: cover;
+        height: 300px;
+     }
+       div.img-amb{
+            height: auto;
+            object-fit: cover;
+                img{
+                    width: 300px;
+
+                }
+        }
+      
+        h3.text-info{
+            position: absolute;
+            top: 300px;
+            z-index: 1;
+            left: 50px;
+            font-family: "Mukta Mahee",sans-serif;
+            font-weight: 600;
+            color: #fff;
+            font-size: 1.5rem;
+            line-height: 1em;
+            overflow: hidden;
+            width: auto;}
 }
+
+
