@@ -30,10 +30,12 @@ fetch(urlBddTest)
              }
 
              for(let i=0; i< 3; i++) {
+                let date = new Date(data.data[i].attributes.DatePublish)
+            
                 let article2 = document.createElement("div")
                 let generateHtml=`
                 <article class="billettemoignages">
-                    <p class="publishdate"> ${data.data[i].attributes.DatePublish} </p>
+                    <p class="publishdate"> ${date.toLocaleDateString("fr")} ${date.getUTCHours()}:${date.getUTCMinutes()} </p>
                     <h2 class="namewitness"> ${data.data[i].attributes.NameWitness} </h2>
                     <span class="etiquettemap"> ${data.data[i].attributes.description_maps.data[0].attributes.depart} / ${data.data[i].attributes.description_maps.data[0].attributes.arrive} </span>
     
@@ -69,6 +71,7 @@ fetch(urlBddTest)
                     </div>
     
             </article>`
+            
             article2.innerHTML = generateHtml
             billets.append(article2) 
             }
