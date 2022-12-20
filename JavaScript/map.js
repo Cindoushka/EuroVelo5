@@ -5,17 +5,6 @@ const descmapURL= "http://62.4.21.200:1337/api/description-maps?populate=*";
 const url = "http://62.4.21.200:1337/uploads/map_b35ed6785e.xml";
 const temoinURL= 'http://62.4.21.200:1337/api/testimonies?populate=*';
 
-
-var mystyle = { 
-  default: {
-    "color": "orange",
-  },
-  click: {
-    "color": "#e5b9d5",
-  }
-}
-
-
 // L.tileLayer('https://{s}.tile.thunderforest.com/spinal-map/{z}/{x}/{y}.png?apikey={apikey}', {
 //     attribution: '&copy; CTRLS all right reserved',
 //     apikey: 'f66d1bb47f424f39b13ebfea1e41d7c7',
@@ -100,7 +89,6 @@ function clickArticle(e){
 }
 
 let container = document.querySelector(".itineraire-map-informations")
-
 
 fetch(descmapURL)
   .then(response => response.json())
