@@ -11,7 +11,7 @@ fetch(urlBddTest)
     .then(response => response.json())
     .then(data =>{
 
-        for(let i=0; i< data.meta.pagination.total ; i++) {
+        for(let i=0; i < data.meta.pagination.total ; i++) {
             let article = document.createElement("div")
             let generateHtml=`
                 <a href="/ambassadeurs.html" class="liendudiapotem">
@@ -100,7 +100,7 @@ function slideNextButton() {
 
     caroussel.style.transition = "1s linear";
 
-    let decalageCar = 490;
+    let decalageCar = 560;
 
     caroussel.style.transform = `translateX(${-decalageCar}px)`
     

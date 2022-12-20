@@ -5,6 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/1a56f0a0c1.js" crossorigin="anonymous"></script>
+    <script src='https://api.mapbox.com/mapbox.js/v3.3.1/mapbox.js'></script>
+    <link href='https://api.mapbox.com/mapbox.js/v3.3.1/mapbox.css' rel='stylesheet' />
+    <script src="https://kit.fontawesome.com/1a56f0a0c1.js" crossorigin="anonymous"></script>
+
+    <!-- Pour la map -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+    integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+    crossorigin=""/>
+
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+    integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+    crossorigin=""></script>
     <link rel="stylesheet" href="sass/main.css">
     <title>La Véloflandres - 617kms à travers les Flandres françaises</title>
 </head>
@@ -39,21 +51,49 @@
     </header>
 
 
-   <nav id="navbar">
-
+    <nav id="navbar" class="nav-itineraire">
+    
+        <div class="burger open"><i class="fa-sharp fa-solid fa-bars"></i></div>
+    
         <a href="index.html">
             <img src="Images/EAVF_Logo_2021.png" alt="logo Via Romea Francigena" title="logo Via Romea Francigena" class="imgnav">
             <img src="Images/logoeurovelo5.png" alt="Logo Eurovelo5" title="logo de l'Eurovelo5" class="imgnav">
         </a>
-        <a href="itineraire.html" class="nav">L'ITINÉRAIRE</a>
-        <a href="infospratiques.html" class="nav">INFOS PRATIQUES</a>
-        <a href="adecouvrir.html" class="nav">À DÉCOUVRIR</a>
-        <a href="ideesparcours.html" class="nav">IDÉES PARCOURS</a>
-        <a href="ambassadeurs.html" class="navambassadeurs">AMBASSADEURS#2</a>
-        <a href="velosettransports.html" class="nav">VÉLOS ET TRANSPORTS</a>
-    <a href=""><img src="/Images/loupe.png" alt="Logo Loupe" title="logo Loupe" class="loupe"></a>
-
-   </nav>
+            <a href="itineraire.html" class="nav">L'ITINÉRAIRE</a>
+            <a href="infospratiques.html" class="nav">INFOS PRATIQUES</a>
+            <a href="adecouvrir.html" class="nav">À DÉCOUVRIR</a>
+            <a href="ideesparcours.html" class="nav">IDÉES PARCOURS</a>
+            <a href="ambassadeurs.html" class="navambassadeurs">AMBASSADEURS#2</a>
+            <a href="velosettransports.html" class="nav">VÉLOS ET TRANSPORTS</a>
+            <a href=""><img src="/Images/loupe.png" alt="Logo Loupe" title="logo Loupe" class="loupe"></a>
+            
+    
+       </nav>
+    
+    
+    
+       <div class="menuburger">
+    
+        <a href="index.html">Accueil</a>
+        <a href="itineraire.html">L'itinéraire</a>
+        <a href="infospratiques.html">Infos Pratiques</a>
+        <a href="adecouvrir.html">A découvrir</a>
+        <a href="ideesparcours.html">Idées parcours</a>
+        <a href="ambassadeurs.html">Ambassadeurs#2</a>
+        <a href="velosettransports.html">Vélo et transports</a>
+        <a href="#" class="perso">Carnet de voyage</a>
+        <a href="#" class="perso">Espace personnel</a>
+        <div>
+            <ul>
+            <li><a href="#"><img src="Images/france.png" alt="drapeau français"></a></li>
+            <li><a href="#"><img src="Images/anglais.png" alt="drapeau anglais"></a></li>
+            <li><a href="#"><img src="Images/allemand.png" alt="drapeau allemand"></a></li>
+            <li><a href="#"><img src="Images/paysbas.png" alt="drapeau pays bas"></a></li>
+        </ul>
+    </div>
+        
+        <div class="cross close hidden"><i class="fa-solid fa-xmark"></i></div>
+    </div>
 
 <div>
     
@@ -159,6 +199,9 @@
     </p>
 </article>
 
+        <div id="map" class="mapaccueil"></div>
+
+
    <form id="formulaireparcours">
         <p class="titreformulaire">Pédalez selon vos envies</p>
 
@@ -254,7 +297,7 @@
                             <img src="Images/arrow-right.png" alt="fleche à droite" class="arrowright">
                         </div>
                 <div class="boutondutemoignage">
-                        <a href="temoignages.html" class="boutontransparent">TOUS LES TÉMOIGNAGES</a>
+                        <a href="ambassadeurs.html" class="boutontransparent">TOUS LES TÉMOIGNAGES</a>
 
 
                     </div>
@@ -433,7 +476,7 @@
         <div class="lienfooternoir">
             <a href="https://www.lavelomaritime.fr/espace-pro-presse">Espace pro / presse</a>
             <a href="https://www.lavelomaritime.fr/foire-aux-questions">FAQ</a>
-            <a href="https://www.lavelomaritime.fr/mentions-legales">Mentions légales</a>
+            <a href="mentionslegales.html">Mentions légales</a>
             <a href="">Gestion des cookies</a>
         </div>
 
@@ -447,6 +490,15 @@
    <script src="JavaScript/scrollingNav.js"></script>
    <script src="JavaScript/diaporama.js"></script>
    <script src="JavaScript/temoignagecaroussel.js"></script>
+   <script src="javascript/map.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/1.7.0/gpx.min.js"></script>
+
+   <script src='https://unpkg.com/leaflet.mapkitmutant@latest/Leaflet.MapkitMutant.js'></script>
+          <!-- A METTRE OBLIGATOIREMENT A LA FIN ! -->
+
+          <script src="//code.jquery.com/jquery-3.6.0.min.js"></script>
+          <script src="javascript/burger.js"></script>
     
 </body>
 </html>
