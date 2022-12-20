@@ -55,6 +55,8 @@
             color: #231f20;
         }
         h3{
+            margin-left: 40px;
+            text-align: center;
             margin-bottom: 0px;
             font-size: 1.5rem;
             color: #231f20;
@@ -331,7 +333,10 @@ div.laast{
         object-fit: cover;
         margin: 0 ;
         height: 300px;
-        width: 100%;
+        width: 110%;
+    }
+    main.ambassadeurs{
+        margin-left: 6%;
     }
 
     .discover{
@@ -345,14 +350,14 @@ div.laast{
         text-align: center;
         color: white;
         font-family: "Poppins";
-        width: 80%;
+        width: 100%;
         position: relative;
         top: -200px;
-        margin: 0px auto 50px auto;
+        margin: 0px 0 50px 5%;
         z-index: 2;
         }
     .context .row{
-        margin:0 2%;
+        margin:0;
         width: 98%;
         text-align: center;
     }
@@ -373,13 +378,14 @@ div.laast{
         flex-wrap: wrap;
         flex-direction: column;
         margin-left: 0px;
-        width: 98%;
+        width: 100%;
      }
      .details h1{
         text-align:center;
      }
      div.context{
         margin-top: -100px;
+        width: 110%;
      }
      div.format{
         margin-left :2px;
