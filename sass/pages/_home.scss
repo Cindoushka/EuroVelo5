@@ -112,6 +112,12 @@
         }
 }
 
+.mapaccueil {
+    width: 55%;
+    height: 300px;
+    margin: 30px auto;
+}
+
 @media screen and (max-width: 390px) { 
     .presentation {
         .titleHome {
@@ -136,5 +142,9 @@
                 line-height: 1.5rem;
                 margin: auto;
             }
+    }
+
+    .mapaccueil {
+        display:none;
     }
 }

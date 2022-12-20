@@ -70,6 +70,9 @@ fetch(allURL)
         map.fitBounds(e.target.getBounds());
         hoverSegment(data.data[i].id)
         findMapDescByID(data.data[i].id)
+        this.setStyle({
+          color: '#e5b9d5' 
+      });
       })
   .addTo(map);
 }})
