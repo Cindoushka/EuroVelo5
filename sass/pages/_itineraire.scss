@@ -38,7 +38,7 @@
                 text-align: center;
                 font-size: 12px;
                 font-weight: 600;
-                span p{
+                span{
                     text-align: center;
                     font-family: 'Poppins', Verdana, Geneva, Tahoma, sans-serif;
                     font-weight: inherit;
@@ -55,6 +55,8 @@
         }
         .itineraire-map-download{
             text-align: center;
+            margin: 10px;
+
             a{
                 font-weight: 600;
                 font-size: .875rem;
@@ -260,7 +262,7 @@
         text-align: center;
         font-size: 12px;
         font-weight: 600;
-        span p{
+        span{
             text-align: center;
             font-family: 'Poppins', Verdana, Geneva, Tahoma, sans-serif;
             font-weight: inherit;
