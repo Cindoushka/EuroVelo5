@@ -116,11 +116,14 @@ fetch(descmapURL)
                     </div>
                     <div class="itineraire-map-informations-text-global">
                         <div class="itineraire-map-informations-habitude">
-                            <span>${data.data[i].attributes.type}</span>
+                            <span>
+                            ${data.data[i].attributes.type}
+                            </span>
                         </div>
                         <div class="itineraire-map-informations-difficulte">
                             <span class="itineraire-map-informations-difficulte-habitude ${data.data[i].attributes.habitude_nb == 1 ? "itineraire-map-informations-difficulte-habitude-blue": data.data[i].attributes.habitude_nb == 2 ? "itineraire-map-informations-difficulte-habitude-red": "itineraire-map-informations-difficulte-habitude-green"}">
                             ${data.data[i].attributes.habitude_nb == 1 ? "J'ai l'habitude": data.data[i].attributes.habitude_nb == 2 ? "Je me dépasse": "Je débute / En famille"}
+                            <span class="dot ${data.data[i].attributes.habitude_nb == 1 ? "dot-blue": data.data[i].attributes.habitude_nb == 2 ? "dot-red": "dot-green"}"></span>
                             </span>
                         </div>
                         <h2>
