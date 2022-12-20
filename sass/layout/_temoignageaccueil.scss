@@ -169,7 +169,7 @@
 @media screen and (max-width: 390px) {
 
     #blocphototemoignage {
-        height: 550px;
+        height: 600px;
         .photodefondcoteneurtem {
             display: none;
         }
@@ -192,41 +192,40 @@
                 color: #585858;
             }
             #carousseltemoignage {
-                width: 95%;
+                width: 100%;
                 gap: 0px;
                 margin: 0px;
                 padding: 0px;
+                overflow:scroll;
                 .liendudiapotem {
                     width: 90%;
                     margin: auto;
-                .imgducarousselt {
-                    width: 375px;
-                    height: 250px;
-                }
-                #textepourimagetem {
-                    height: 250px;
-                    width: 90%;
-                    .coeurcaroussel {
-                        margin-left: 310px;
-                        width: 15px;
+                    .imgducarousselt {
+                        width: 380px;
+                        height: 250px;
+                    }
+                    .textepourimagetem{
+                        height: 250px;
+                        width: 100%;
+                        .coeurcaroussel {
+                            margin-left: 280px;
+                            width: 15px;
+                            height: 15px;
+                        }
                     }
                 }
-            }
             }
             .lesfleches {
                 display:none;
             }
             .boutondutemoignage {
                 margin: 270px 0px 0px 90px;
-            .boutontransparent{
-                margin: auto;
-                border: 2px black solid;
-                color: black;
-                
+                .boutontransparent {
+                    margin: auto;
+                    border: 2px black solid;
+                    color: black;
+                }
             }
         }
-        }
     }
-
-
 }

@@ -4,6 +4,7 @@
     position: relative;
     padding: 0px 15px;
     margin: auto;
+    overflow: hidden;
     .billettemoignages {
         background-color: #F4F4F4;
         padding: 30px;
@@ -91,7 +92,7 @@
 @media screen and (max-width: 390px) {
 
     #billetstemoignage {
-        overflow: hidden;
+        overflow: scroll;
         width: 360px;
         margin: auto;
         padding: 0px;

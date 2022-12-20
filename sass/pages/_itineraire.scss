@@ -455,7 +455,6 @@
 }
 
 .itineraire-map-avis-div-global{
-    
     #itineraire-temoignages{
         background: #f4f4f4;
         padding-bottom: 120px;
@@ -474,12 +473,23 @@
             }
         }
         
-            .itineraire-map-avis-img{
+            .itineraire-map-avis-div-img {
+                overflow: hidden;
                 width:470px;
                 height: 265px;
-                border-radius: 5px;
                 margin-top: 15px;
                 margin-bottom: 15px;
+                border-radius: 5px;
+                .itineraire-map-avis-img{
+                    width:470px;
+                    height: 265px;
+                    border-radius: 5px;
+
+                    &:hover {
+                        filter: blur(3px);
+                        transform:scale(1.2);
+                    }
+                }
             }
         }
         .itineraire-map-avis-comments-avis{ 

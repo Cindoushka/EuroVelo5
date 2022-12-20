@@ -29,7 +29,7 @@ fetch(urlBddTest)
                 containerCar.append(article) 
              }
 
-             for(let i=0; i< 3; i++) {
+             for(let i=0; i< data.meta.pagination.total; i++) {
                 let date = new Date(data.data[i].attributes.DatePublish)
             
                 let article2 = document.createElement("div")
