@@ -17,7 +17,7 @@ fetch(urlBddTest)
                 <a href="/ambassadeurs.html" class="liendudiapotem">
                     <img src="${urlImgTest}${data.data[i].attributes.Picture.data[0].attributes.formats.medium.url}" class="imgducarousselt">
 
-                    <div id="textepourimagetem">
+                    <div class="textepourimagetem">
                         <img src="Images/coeur.png" alt="logo coeur" class="coeurcaroussel">
                         <p class="textetemoignagec"> Virée de ${data.data[i].attributes.description_maps.data[0].attributes.depart} à ${data.data[i].attributes.description_maps.data[0].attributes.arrive} pour ${data.data[i].attributes.NameWitness}</p>
                     </div>
@@ -40,7 +40,7 @@ fetch(urlBddTest)
                     <span class="etiquettemap"> ${data.data[i].attributes.description_maps.data[0].attributes.depart} / ${data.data[i].attributes.description_maps.data[0].attributes.arrive} </span>
     
     
-                    <div id="notes">
+                    <div class="notes">
                         <div class="note">
                             <p class="note1bdd"> ${data.data[i].attributes.NoteSecurity} ${note}</p>
                             <p class="typenote">Sécurité</p> 
