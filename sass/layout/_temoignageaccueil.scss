@@ -78,7 +78,8 @@
                 gap: 25px;
                 width: 98vw;
                 margin: 30px auto 0px auto;
-                overflow: hidden;
+                // overflow: hidden;
+                overflow-y: hidden;
                 padding: 5px;
                 margin-left: 10px;
                 z-index: 999; 
@@ -166,6 +167,7 @@
 @media screen and (max-width: 390px) {
 
     #blocphototemoignage {
+        height: 550px;
         .photodefondcoteneurtem {
             display: none;
         }
@@ -210,8 +212,17 @@
             }
             }
             .lesfleches {
-                margin-left: 0%;
+                display:none;
             }
+            .boutondutemoignage {
+                margin: 270px 0px 0px 90px;
+            .boutontransparent{
+                margin: auto;
+                border: 2px black solid;
+                color: black;
+                
+            }
+        }
         }
     }
 

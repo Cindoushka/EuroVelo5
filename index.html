@@ -5,8 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/1a56f0a0c1.js" crossorigin="anonymous"></script>
+    <script src='https://api.mapbox.com/mapbox.js/v3.3.1/mapbox.js'></script>
+    <link href='https://api.mapbox.com/mapbox.js/v3.3.1/mapbox.css' rel='stylesheet' />
+    <script src="https://kit.fontawesome.com/1a56f0a0c1.js" crossorigin="anonymous"></script>
+
+    <!-- Pour la map -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+    integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+    crossorigin=""/>
+
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+    integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+    crossorigin=""></script>
     <link rel="stylesheet" href="sass/main.css">
-    <title>Via Romea Francigena - Plus de 1000kms de la Belgique au Nord de la France</title>
+    <title>La Véloflandres - 617kms à travers les Flandres françaises</title>
 </head>
 <body>
 
@@ -39,21 +51,49 @@
     </header>
 
 
-   <nav id="navbar">
-
+    <nav id="navbar" class="nav-itineraire">
+    
+        <div class="burger open"><i class="fa-sharp fa-solid fa-bars"></i></div>
+    
         <a href="index.html">
             <img src="Images/EAVF_Logo_2021.png" alt="logo Via Romea Francigena" title="logo Via Romea Francigena" class="imgnav">
             <img src="Images/logoeurovelo5.png" alt="Logo Eurovelo5" title="logo de l'Eurovelo5" class="imgnav">
         </a>
-        <a href="itineraire.html" class="nav">L'ITINÉRAIRE</a>
-        <a href="infospratiques.html" class="nav">INFOS PRATIQUES</a>
-        <a href="adecouvrir.html" class="nav">À DÉCOUVRIR</a>
-        <a href="ideesparcours.html" class="nav">IDÉES PARCOURS</a>
-        <a href="ambassadeurs.html" class="navambassadeurs">AMBASSADEURS#2</a>
-        <a href="velosettransports.html" class="nav">VÉLOS ET TRANSPORTS</a>
-    <a href=""><img src="/Images/loupe.png" alt="Logo Loupe" title="logo Loupe" class="loupe"></a>
-
-   </nav>
+            <a href="itineraire.html" class="nav">L'ITINÉRAIRE</a>
+            <a href="infospratiques.html" class="nav">INFOS PRATIQUES</a>
+            <a href="adecouvrir.html" class="nav">À DÉCOUVRIR</a>
+            <a href="ideesparcours.html" class="nav">IDÉES PARCOURS</a>
+            <a href="ambassadeurs.html" class="navambassadeurs">AMBASSADEURS#2</a>
+            <a href="velosettransports.html" class="nav">VÉLOS ET TRANSPORTS</a>
+            <a href=""><img src="/Images/loupe.png" alt="Logo Loupe" title="logo Loupe" class="loupe"></a>
+            
+    
+       </nav>
+    
+    
+    
+       <div class="menuburger">
+    
+        <a href="index.html">Accueil</a>
+        <a href="itineraire.html">L'itinéraire</a>
+        <a href="infospratiques.html">Infos Pratiques</a>
+        <a href="adecouvrir.html">A découvrir</a>
+        <a href="ideesparcours.html">Idées parcours</a>
+        <a href="ambassadeurs.html">Ambassadeurs#2</a>
+        <a href="velosettransports.html">Vélo et transports</a>
+        <a href="#" class="perso">Carnet de voyage</a>
+        <a href="#" class="perso">Espace personnel</a>
+        <div>
+            <ul>
+            <li><a href="#"><img src="Images/france.png" alt="drapeau français"></a></li>
+            <li><a href="#"><img src="Images/anglais.png" alt="drapeau anglais"></a></li>
+            <li><a href="#"><img src="Images/allemand.png" alt="drapeau allemand"></a></li>
+            <li><a href="#"><img src="Images/paysbas.png" alt="drapeau pays bas"></a></li>
+        </ul>
+    </div>
+        
+        <div class="cross close hidden"><i class="fa-solid fa-xmark"></i></div>
+    </div>
 
 <div>
     
@@ -110,7 +150,7 @@
         </div>
         
         <div class="caption">
-            <h1 class="hometitle">La Via Romea Francigena</h1>
+            <h1 class="hometitle">La Véloflandres</h1>
             <h2 class="homesubtitle">Une expérience unique à la découverte de perles rares</h2>
 
             <div class="divboutonsaccueil">
@@ -143,23 +183,24 @@
 
 <article class="presentation">
 
-    <h2 class="titleHome"> EuroVelo 5 - La Via Romea Francigena®, 1000 km à vélo de l'Angleterre à l'Italie</h2>
+    <h2 class="titleHome"> EuroVelo 5 - La Véloflandres®, 617 kms à vélo dans les flandres Françaises</h2>
 
-    <p class="descHome">Prêt à vivre en pleine nature? La Via Romea Francigena, 
+    <p class="descHome">Prêt à vivre en pleine nature? La Véloflandres, 
         <a href="itineraire.html">véloroute continue à 100%</a>
         vous invite en famille ou entre amis à découvrir le patrimoine extraordinaire du nord de la France... à deux roues!
-        L'itinéraire débute à Canterburry et se termine à Brindisi, dans les magnifiques Pouilles italiennes, en passant par la charmante capitale Belge, Bruxelles.
-        Cet intinéraire à vélo traverse le Sud de l'Angleterre, le Nord de la France, la Belgique, le Luxembourg, l'Alsace, la Suisse et l'entièreté de l'Italie en passant par Rome.
-        De nombreuses étapes vous réservent de belles surprise, en plus de traverser Lille, vous découvrirez la nature, notamment en passant par Dinant,
-        cette ville où vous pourrez découvrir la descente de la Lesse. Découvrez le pays du Luxembourg, faites un break à Strasbourg et ses maisons typiques,
-        pédalez sur les rives du Lac Lucerne en Suisse, le long du Lac de Côme en arrivant en Italie. Faites un break au sein de la capitale du shopping: Milan, avant de découvrir la mer
-        Ligurienne pour rejoindre la Capitale Italienne et de traverser les Pouilles jusque Brindisi, sur les bords de la Mer Adriatique.
+        L'itinéraire débute à Calais et se termine à Martelange. Cet intinéraire à vélo traverse le Nord de la France, jusqu'à la frontière belge.
+        De nombreuses étapes vous réservent de belles surprise, en plus de traverser Lille, vous découvrirez la nature.
+        Au départ de la côte baignée par la mer du Nord, en passant par le marais Audomarois, traversez également les villes de Lens, connue pour son public rouge et or, et de Lille, la capitale des Flandres,
+        où un break sera le bienvenue pour goûter la gastronomie nordiste.
     </p>
 
     <p class="descHome">Avec une part importante des voies partagées, c'est un itinéraire idéal pour les cyclistes en recherche d'évasion, de défi, de découverte culturelle et gastronomique. 
         Vous n'avez pas l'habitude du vélo? Profitez-en pour vous remettre en selle!
     </p>
 </article>
+
+        <div id="map" class="mapaccueil"></div>
+
 
    <form id="formulaireparcours">
         <p class="titreformulaire">Pédalez selon vos envies</p>
@@ -256,7 +297,7 @@
                             <img src="Images/arrow-right.png" alt="fleche à droite" class="arrowright">
                         </div>
                 <div class="boutondutemoignage">
-                        <a href="temoignages.html" class="boutontransparent">TOUS LES TÉMOIGNAGES</a>
+                        <a href="ambassadeurs.html" class="boutontransparent">TOUS LES TÉMOIGNAGES</a>
 
 
                     </div>
@@ -286,7 +327,7 @@
 
             <div class="textepourlagridaccueil">
                 <p class="boutonpourlagrid">L'itinéraire</p>
-                <p class="titreimagegrid">La Via Romea Francigena, itinéraire au coeur des Flandres</p>
+                <p class="titreimagegrid">La Véloflandres, itinéraire au coeur des Flandres</p>
             </div>
         </a>
 
@@ -295,7 +336,7 @@
 
             <div class="textepourlagridaccueil">
                 <p class="boutonpourlagrid">Idées pratiques</p>
-                <p class="titreimagegrid">Idées cadeaux La Via Romea Francigena</p>
+                <p class="titreimagegrid">Idées cadeaux Véloflandres</p>
             </div>
         </a>
 
@@ -304,7 +345,7 @@
 
             <div class="textepourlagridaccueil">
                 <p class="boutonpourlagrid">Pratique</p>
-                <p class="titreimagegrid">Service porte-vélo de Calais à Lille</p>
+                <p class="titreimagegrid">Service porte-vélo de Calais à Lens</p>
             </div>
         </a>
 
@@ -322,7 +363,7 @@
 
             <div class="textepourlagridaccueil">
                 <p class="boutonpourlagrid">À découvrir</p>
-                <p class="titreimagegrid">La Via Francigena des beffrois</p>
+                <p class="titreimagegrid">La Véloflandres des beffrois</p>
             </div>
         </a>
 
@@ -340,7 +381,7 @@
 
             <div class="textepourlagridaccueil">
                 <p class="boutonpourlagrid">Pratique</p>
-                <p class="titreimagegrid">Signalez / consultez des anomalies sur La Via Romea Francigena</p>
+                <p class="titreimagegrid">Signalez / consultez des anomalies sur La véloflandres</p>
             </div>
         </a>
 
@@ -349,7 +390,7 @@
 
             <div class="textepourlagridaccueil">
                 <p class="boutonpourlagrid">À découvrir</p>
-                <p class="titreimagegrid">Les sites incontournables de la Via Romea Francigena</p>
+                <p class="titreimagegrid">Les sites incontournables de la Véloflandres</p>
             </div>
         </a>
 
@@ -389,7 +430,7 @@
                             Qui sommes-nous?
                         </h2>
                         <p class="whoweare">
-                            La Via Romea Francigena est un itinéraire vélo développé et promu par un réseau de collectivités territoriales et leurs institutions touristiques.
+                            La Véloflandres est un itinéraire vélo développé et promu par un réseau de collectivités territoriales et leurs institutions touristiques.
                         </p>
                     </div>
         
@@ -435,7 +476,7 @@
         <div class="lienfooternoir">
             <a href="https://www.lavelomaritime.fr/espace-pro-presse">Espace pro / presse</a>
             <a href="https://www.lavelomaritime.fr/foire-aux-questions">FAQ</a>
-            <a href="https://www.lavelomaritime.fr/mentions-legales">Mentions légales</a>
+            <a href="mentionslegales.html">Mentions légales</a>
             <a href="">Gestion des cookies</a>
         </div>
 
@@ -449,6 +490,15 @@
    <script src="JavaScript/scrollingNav.js"></script>
    <script src="JavaScript/diaporama.js"></script>
    <script src="JavaScript/temoignagecaroussel.js"></script>
+   <script src="javascript/map.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/1.7.0/gpx.min.js"></script>
+
+   <script src='https://unpkg.com/leaflet.mapkitmutant@latest/Leaflet.MapkitMutant.js'></script>
+          <!-- A METTRE OBLIGATOIREMENT A LA FIN ! -->
+
+          <script src="//code.jquery.com/jquery-3.6.0.min.js"></script>
+          <script src="javascript/burger.js"></script>
     
 </body>
 </html>

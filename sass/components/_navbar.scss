@@ -168,11 +168,13 @@ nav {
         transform: translateX(0%);
         top: 0;
         background-color: rgba($color: black, $alpha: 0.9);
-        position: absolute;
+        position: fixed;
         z-index: 6000;
         height: 100%;
         width: 100%;
         text-align: center;
+        overflow-y: hidden;
+        overflow-x: hidden;
         a{
             margin: 15px 0;
             font-family: Poppins,sans-serif;
