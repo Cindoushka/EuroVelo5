@@ -13,7 +13,7 @@ const temoinURL= 'http://62.4.21.200:1337/api/testimonies?populate=*';
 
 
   L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager_labels_under/{z}/{x}/{y}{r}.png', {
-    attribution: '&copy; CTRLS all right reserved',
+    attribution: '&copy; CTRLS all rights reserved',
     maxZoom: 22
   }).addTo(map);
 
